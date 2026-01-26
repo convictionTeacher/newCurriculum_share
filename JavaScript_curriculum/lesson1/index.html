@@ -98,17 +98,15 @@
                 <h4 class="c-title-question">Q1: 商品名を保存し、コンソールに表示するコードの空欄を埋めてください。再代入はありません。</h4>
                 <div class="c-code -blank">
                   <label for="blank1-11" class="c-label-input">Variable declaration</label>
-                  <input type="text" class="c-input js-blank--1" id="blank1-11" placeholder="①" /> productName =
-                  <label for="blank1-12" class="c-label-input">String quote</label>
-                  <input type="text" class="c-input js-blank--2" id="blank1-12" placeholder="②" /> ワイヤレスイヤホン
-                  <label for="blank1-13" class="c-label-input">String quote close</label>
-                  <input type="text" class="c-input js-blank--3" id="blank1-13" placeholder="③" />;<br />console.log(productName);
+                  <input type="text" class="c-input js-blank--1" id="blank1-11" placeholder="①" /> productName = "ワイヤレスイヤホン";<br />
+                  console.log(<label for="blank1-12" class="c-label-input">Variable name</label> <input type="text" class="c-input js-blank--2" id="blank1-12" placeholder="②" />);
                 </div>
                 <div class="p-result u-mb-10 js-blank-result--11">
                   <span class="js-blank-correct--11 u-color-normal u-hide">〇 正解！</span>
                   <span class="js-blank-incorrect--11 u-color-warning u-hide">
                     ✕ 不正解。<br />
-                    正解は ①const ②"または'または` ③"または'または` です。
+                    正解は ①const ②productName です。<br />
+                    constは再代入しない変数宣言、productNameは同じ変数名を使用します。
                   </span>
                 </div>
                 <button data-blank-id="11" class="c-btn">答えを確認</button>
@@ -117,20 +115,16 @@
                 <h4 class="c-title-question">Q2: お知らせメッセージを保存し、再代入した後にコンソールに表示するコードの空欄を埋めてください。</h4>
                 <div class="c-code -blank">
                   <label for="blank1-14" class="c-label-input">Variable declaration</label>
-                  <input type="text" class="c-input js-blank--4" id="blank1-14" placeholder="①" /> noticeMessage =
-                  <label for="blank1-15" class="c-label-input">String quote</label>
-                  <input type="text" class="c-input js-blank--5" id="blank1-15" placeholder="②" />営業時間変更のお知らせ
-                  <label for="blank1-16" class="c-label-input">String quote close</label>
-                  <input type="text" class="c-input js-blank--6" id="blank1-16" placeholder="③" />
-                  ;<br />
+                  <input type="text" class="c-input js-blank--4" id="blank1-14" placeholder="①" /> noticeMessage = "営業時間変更のお知らせ";<br />
                   noticeMessage = "休業日のお知らせ";<br />
-                  console.log(noticeMessage);
+                  console.<label for="blank1-15" class="c-label-input">Console method</label><input type="text" class="c-input js-blank--5" id="blank1-15" placeholder="②" />(noticeMessage);
                 </div>
                 <div class="p-result u-mb-10 js-blank-result--12">
                   <span class="js-blank-correct--12 u-color-normal u-hide">〇 正解！</span>
                   <span class="js-blank-incorrect--12 u-color-warning u-hide">
                     ✕ 不正解。<br />
-                    正解は ①let ②"または'または` ③"または'または` です。
+                    正解は ①let ②log です。<br />
+                    letは再代入可能な変数宣言、logはコンソールに表示するメソッドです。
                   </span>
                 </div>
                 <button data-blank-id="12" class="c-btn">答えを確認</button>
@@ -1090,24 +1084,18 @@
               <div class="p-blank__item js-blankItem">
                 <h4 class="c-title-question">Q1: テンプレートリテラルで商品情報を作成し、コンソールに表示するコードの空欄を埋めてください。再代入はありません。</h4>
                 <div class="c-code -blank">
-                  const message =
-                  <label for="blank1-91" class="c-label-input">Template literal start</label>
-                  <input type="text" class="c-input js-blank--31" id="blank1-91" placeholder="①" />商品:
-                  <label for="blank1-92" class="c-label-input">Expression start</label>
-                  <input type="text" class="c-input js-blank--32" id="blank1-92" placeholder="②" />
-                  <label for="blank1-93" class="c-label-input">Variable name</label>
-                  <input type="text" class="c-input js-blank--33" id="blank1-93" placeholder="③" />productName
-                  <label for="blank1-94" class="c-label-input">Expression end</label>
-                  <input type="text" class="c-input js-blank--34" id="blank1-94" placeholder="④" />
-                  <label for="blank1-95" class="c-label-input">Template literal end</label>
-                  <input type="text" class="c-input js-blank--35" id="blank1-95" placeholder="⑤" />;<br />
-                  console.log(message);
+                  <label for="blank1-91" class="c-label-input">Variable declaration</label>
+                  <input type="text" class="c-input js-blank--31" id="blank1-91" placeholder="①" /> productName = "ノートPC";<br />
+                  const price = 85000;<br />
+                  const message = `商品: ${productName}、価格: ${<label for="blank1-92" class="c-label-input">Variable name</label><input type="text" class="c-input js-blank--32" id="blank1-92" placeholder="②" />}円`;<br />
+                  console.<label for="blank1-93" class="c-label-input">Console method</label><input type="text" class="c-input js-blank--33" id="blank1-93" placeholder="③" />(message);
                 </div>
                 <div class="p-result u-mb-10 js-blank-result--91">
                   <span class="js-blank-correct--91 u-color-normal u-hide">〇 正解！</span>
                   <span class="js-blank-incorrect--91 u-color-warning u-hide">
-                    ✕ 不正解。
-                    <br />正解は ①` ②$ ③{ ④} ⑤`です。
+                    ✕ 不正解。<br />
+                    正解は ①const ②price ③log です。<br />
+                    constは再代入しない変数宣言、priceは変数名、logはコンソール出力のメソッドです。
                   </span>
                 </div>
                 <button data-blank-id="91" class="c-btn">答えを確認</button>

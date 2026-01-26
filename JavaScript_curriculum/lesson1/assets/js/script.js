@@ -34,8 +34,8 @@ window.QUIZ_ANSWERS = {
  * @type {Object.<string, {inputs: string[], answers: string[], validation: string}>}
  */
 window.BLANK_ANSWERS = {
-  11: { inputs: [".js-blank--1", ".js-blank--2", ".js-blank--3"], answers: ["const", '"', '"'], validation: "flexible_quote" },
-  12: { inputs: [".js-blank--4", ".js-blank--5", ".js-blank--6"], answers: ["let", '"', '"'], validation: "flexible_quote" },
+  11: { inputs: [".js-blank--1", ".js-blank--2"], answers: ["const", "productName"], validation: "default" },
+  12: { inputs: [".js-blank--4", ".js-blank--5"], answers: ["let", "log"], validation: "default" },
   21: { inputs: [".js-blank--7", ".js-blank--8"], answers: ["const", "980"], validation: "default" },
   22: { inputs: [".js-blank--9", ".js-blank--10"], answers: ["let", "150"], validation: "default" },
   31: { inputs: [".js-blank--11", ".js-blank--12"], answers: ["const", "1200"], validation: "default" },
@@ -48,6 +48,6 @@ window.BLANK_ANSWERS = {
   62: { inputs: [".js-blank--25", ".js-blank--26"], answers: ["let", "*="], validation: "default" },
   71: { inputs: [".js-blank--27", ".js-blank--28"], answers: ["const", "+"], validation: "default" },
   72: { inputs: [".js-blank--29", ".js-blank--30"], answers: ["const", "+"], validation: "default" },
-  91: { inputs: [".js-blank--31", ".js-blank--32", ".js-blank--33", ".js-blank--34", ".js-blank--35"], answers: ["`", "$", "{", "}", "`"], validation: "template_literal" },
+  91: { inputs: [".js-blank--31", ".js-blank--32", ".js-blank--33"], answers: ["const", "price", "log"], validation: "default" },
   92: { inputs: [".js-blank--36", ".js-blank--37"], answers: ["greeting", "$"], validation: "default" },
 };
