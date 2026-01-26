@@ -264,6 +264,29 @@ JavaScript Curriculum Common StyleCSS
   color: var(--color-primary);
 }
 
+.c-text.-error {
+  color: #ab1724;
+  border: #ab1724 1px solid;
+  font-weight: 600;
+  padding: 2px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.c-text.-flex {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.c-text.-flex.u-hide {
+  display: none;
+}
+
+.c-text.-underline {
+  text-decoration: underline;
+}
+
 .c-code {
   font-family: var(--font-family-mono);
   background: var(--color-gray-2);
@@ -284,10 +307,6 @@ JavaScript Curriculum Common StyleCSS
   padding: 8px 12px;
   border-radius: 4px;
   margin-bottom: 8px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
 }
 
 .c-code.-blank .c-input {
@@ -378,6 +397,13 @@ JavaScript Curriculum Common StyleCSS
   background: var(--color-base-10);
 }
 
+.c-button-practice:disabled {
+  background: var(--color-gray-10);
+  color: var(--color-gray-40);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .c-input {
   padding: 8px 12px;
   border: 2px solid var(--color-gray-16);
@@ -391,6 +417,12 @@ JavaScript Curriculum Common StyleCSS
 .c-input:focus {
   outline: none;
   border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-shadow);
+}
+
+.c-input.is-active {
+  outline: none;
+  border-color: #ab1724;
   box-shadow: 0 0 0 1px var(--color-shadow);
 }
 

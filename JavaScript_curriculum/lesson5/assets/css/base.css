@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/* ===================================
+   lesson5 - テーマカラー定義（ピンク系）
+   =================================== */
+
+:root {
+  /* カラーパレット（ピンク・パステル系） */
+  --color-primary: #f2a7c6;        /* メインピンク */
+  --color-primary-light: #fdeaf1;  /* ごく薄いピンク背景 */
+  --color-secondary: #f6c1d9;      /* サブ・淡いピンク */
+
+  --color-base-0: #f2a7c60d;       /* ほぼ白に近い下地 */
+  --color-base-5: #e18bb3;         /* 中間トーン */
+  --color-base-10: #c65a8e;        /* 濃いアクセント */
+
+  --color-shadow: #f2a7c64d;       /* 影用ピンク */
+  --color-border: #f2a7c633;       /* ボーダー用 */
+}

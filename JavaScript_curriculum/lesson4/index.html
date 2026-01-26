@@ -66,7 +66,7 @@
                     <label class="p-choice__item"><input type="radio" name="q1_1" value="d" /> エラー</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--11">
-                    <span class="js-quiz-message--11 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--11 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--11 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--11 u-color-warning u-hide"
                       >✕ 不正解。<br />正解は「成人です 処理終了」です。if文の条件が真（true）の場合にブロック内が実行され、その後に続くコードも実行されます。</span
@@ -91,7 +91,7 @@
                     <label class="p-choice__item"><input type="radio" name="q1_2" value="d" /> 何も表示されない</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--12">
-                    <span class="js-quiz-message--12 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--12 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--12 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--12 u-color-warning u-hide"
                       >✕ 不正解。<br />正解は「終了」です。scoreは50なので、80以上という条件が偽（false）となり、if文のブロック内は実行されません。その後の処理は実行されます。</span
@@ -112,8 +112,10 @@
                 <h4 class="c-title-question">Q1: 年齢が18以上の場合に"成人です"とコンソールに表示するコードの空欄を埋めてください。</h4>
                 <div class="c-code -blank">
                   const age = 25;<br />
-                  <label for="blank-11" class="c-label-input">Keyword</label><input type="text" class="c-input js-blank--1" id="blank-11" placeholder="①" /> (age
-                  <label for="blank-12" class="c-label-input">Operator</label><input type="text" class="c-input js-blank--2" id="blank-12" placeholder="②" /> 18) {<br />
+                  <label for="blank-11" class="c-label-input">Keyword</label>
+                  <input type="text" class="c-input js-blank--1" id="blank-11" placeholder="①" /> (age
+                  <label for="blank-12" class="c-label-input">Operator</label>
+                  <input type="text" class="c-input js-blank--2" id="blank-12" placeholder="②" /> 18) {<br />
                   &nbsp;&nbsp;console.log("成人です");<br />
                   }
                 </div>
@@ -128,14 +130,18 @@
                 <h4 class="c-title-question">Q2: 点数が60以上の場合に"合格"とコンソールに表示するコードの空欄を埋めてください。</h4>
                 <div class="c-code -blank">
                   const score = 75;<br />
-                  <label for="blank-13" class="c-label-input">Keyword</label><input type="text" class="c-input js-blank--3" id="blank-13" placeholder="①" /> (score >=
-                  <label for="blank-14" class="c-label-input">Number</label><input type="text" class="c-input js-blank--4" id="blank-14" placeholder="②" />) {<br />
-                  &nbsp;&nbsp;console.log("合格");<br />
-                  }
+                  <label for="blank-13" class="c-label-input">Keyword</label>
+                  <input type="text" class="c-input js-blank--3" id="blank-13" placeholder="①" /> (score >=
+                  <label for="blank-14" class="c-label-input">Number</label>
+                  <input type="text" class="c-input js-blank--4" id="blank-14" placeholder="②" />) {<br />
+                  &nbsp;&nbsp;console.log("合格");<br />}
                 </div>
                 <div class="p-result u-mb-10 js-blank-result--12">
                   <span class="js-blank-correct--12 u-color-normal u-hide">〇 正解！</span>
-                  <span class="js-blank-incorrect--12 u-color-warning u-hide">✕ 不正解。<br />正解は ①if ②60 です。</span>
+                  <span class="js-blank-incorrect--12 u-color-warning u-hide">
+                    ✕ 不正解。<br />
+                    正解は ①if ②60 です。
+                  </span>
                 </div>
                 <button data-blank-id="12" class="c-btn">答えを確認</button>
               </div>
@@ -162,7 +168,7 @@
                 <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L4-S1-1</span>
                 <span class="u-flex-1">
                   '.js-show-banner-step1'ボタンにクリックイベントを追加。<br />
-                  クリック時に'.js-banner-step1'要素を取得し、要素が存在する（nullでない）場合のみ、その要素を表示（display: block）する。
+                  クリック時に'.js-banner-step1'要素を取得し、要素が存在する（nullでない）場合のみ、その要素を表示する。
                 </span>
               </div>
             </div>
@@ -213,7 +219,7 @@
                     <label class="p-choice__item"><input type="radio" name="q2_1" value="d" /> エラー</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--21">
-                    <span class="js-quiz-message--21 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--21 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--21 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--21 u-color-warning u-hide">✕ 不正解。<br />正解は「奇数」です。7を2で割った余りは1なので、条件は偽（false）となりelse節が実行されます。</span>
                   </div>
@@ -237,7 +243,7 @@
                     <label class="p-choice__item"><input type="radio" name="q2_2" value="d" /> 何も表示されない</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--22">
-                    <span class="js-quiz-message--22 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--22 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--22 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--22 u-color-warning u-hide">✕ 不正解。<br />正解は「未ログイン」です。isLoginはfalseなので、else節が実行されます。</span>
                   </div>
@@ -368,7 +374,7 @@
                     <label class="p-choice__item"><input type="radio" name="q3_1" value="d" /> 優 良</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--31">
-                    <span class="js-quiz-message--31 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--31 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--31 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--31 u-color-warning u-hide"
                       >✕ 不正解。<br />正解は「良」です。75は80以上ではないので最初の条件は偽ですが、60以上の条件は真なのでelse ifが実行されます。</span
@@ -396,7 +402,7 @@
                     <label class="p-choice__item"><input type="radio" name="q3_2" value="d" /> 午前 午後</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--32">
-                    <span class="js-quiz-message--32 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--32 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--32 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--32 u-color-warning u-hide">✕ 不正解。<br />正解は「午前」です。10は12未満なので最初のif文の条件が真となり、その後の条件はチェックされません。</span>
                   </div>
@@ -542,7 +548,7 @@
                     <label class="p-choice__item"><input type="radio" name="q4_1" value="d" /> false true</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--41">
-                    <span class="js-quiz-message--41 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--41 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--41 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--41 u-color-warning u-hide"
                       >✕ 不正解。<br />正解は「false true」です。===は型も含めて厳密に比較するので文字列と数値でfalse、==は型変換後に比較するのでtrueになります。</span
@@ -564,7 +570,7 @@
                     <label class="p-choice__item"><input type="radio" name="q4_2" value="d" /> エラー</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--42">
-                    <span class="js-quiz-message--42 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--42 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--42 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--42 u-color-warning u-hide">✕ 不正解。<br />正解は「true」です。5は3より大きく10未満なので、両方の条件が真となりtrueが返されます。</span>
                   </div>
@@ -711,7 +717,7 @@
                     <label class="p-choice__item"><input type="radio" name="q5_1" value="d" /> 何も表示されない</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--51">
-                    <span class="js-quiz-message--51 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--51 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--51 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--51 u-color-warning u-hide"
                       >✕ 不正解。<br />正解は「運転できます」です。年齢が18以上かつ免許を持っているので、&&演算子により両方の条件が真となります。</span
@@ -736,7 +742,7 @@
                     <label class="p-choice__item"><input type="radio" name="q5_2" value="d" /> undefined</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--52">
-                    <span class="js-quiz-message--52 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--52 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--52 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--52 u-color-warning u-hide"
                       >✕ 不正解。<br />正解は「編集可能」です。||演算子はどちらか一方が真であればtrueを返します。isOwnerがtrueなので条件を満たします。</span
@@ -893,7 +899,7 @@
                     <label class="p-choice__item"><input type="radio" name="q6_1" value="d" /> 青 その他</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--61">
-                    <span class="js-quiz-message--61 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--61 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--61 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--61 u-color-warning u-hide">✕ 不正解。<br />正解は「青」です。colorが"blue"に一致するので、該当するcaseが実行され、breakで処理が終了します。</span>
                   </div>
@@ -920,7 +926,7 @@
                     <label class="p-choice__item"><input type="radio" name="q6_2" value="d" /> 3</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--62">
-                    <span class="js-quiz-message--62 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--62 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--62 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--62 u-color-warning u-hide"
                       >✕ 不正解。<br />正解は「2 3」です。breakがないため、一致したcase 2から以降のcase 3も実行されます（フォールスルー）。</span
@@ -1077,7 +1083,7 @@
                     <label class="p-choice__item"><input type="radio" name="q7_1" value="d" /> false</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--71">
-                    <span class="js-quiz-message--71 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--71 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--71 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--71 u-color-warning u-hide"
                       >✕ 不正解。<br />正解は「成人」です。三項演算子は、条件が真なら?の後の値、偽なら:の後の値を返します。20は18以上なので"成人"が返されます。</span
@@ -1099,7 +1105,7 @@
                     <label class="p-choice__item"><input type="radio" name="q7_2" value="d" /> 55</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--72">
-                    <span class="js-quiz-message--72 u-color-message u-hide">選択肢を選んでください</span>
+                    <span class="js-quiz-message--72 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--72 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--72 u-color-warning u-hide">✕ 不正解。<br />正解は「不合格」です。55は60以上ではないので条件が偽となり、:の後の"不合格"が返されます。</span>
                   </div>

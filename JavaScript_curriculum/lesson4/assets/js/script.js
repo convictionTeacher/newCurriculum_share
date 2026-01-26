@@ -1,41 +1,35 @@
 /**
- * Lesson4: 条件分岐 - 解答設定
+ * ===================================
+ * JavaScript Script lesson4
+ * ===================================
  */
 
-// クイズの正解を定義
+/**
+ * 設定データ - 出力予想問題の正解
+ * @type {Object.<string, string>}
+ */
 window.QUIZ_ANSWERS = {
-  // Step1: if文の基本
-  q1_1: "c", // 成人です 処理終了
-  q1_2: "b", // 終了
-
-  // Step2: if-else文
-  q2_1: "b", // 奇数
-  q2_2: "b", // 未ログイン
-
-  // Step3: else if（複数条件分岐）
-  q3_1: "b", // 良
-  q3_2: "a", // 午前
-
-  // Step4: 比較演算子
-  q4_1: "d", // false true
-  q4_2: "a", // true
-
-  // Step5: 論理演算子
-  q5_1: "a", // 運転できます
-  q5_2: "a", // 編集可能
-
-  // Step6: switch文
-  q6_1: "b", // 青
-  q6_2: "b", // 2 3
-
-  // Step7: 三項演算子
-  q7_1: "a", // 成人
-  q7_2: "b", // 不合格
+  q1_1: "c",
+  q1_2: "b",
+  q2_1: "b",
+  q2_2: "b",
+  q3_1: "b",
+  q3_2: "a",
+  q4_1: "d",
+  q4_2: "a",
+  q5_1: "a",
+  q5_2: "a",
+  q6_1: "b",
+  q6_2: "b",
+  q7_1: "a",
+  q7_2: "b",
 };
 
-// 穴埋め問題の正解を定義
+/**
+ * 設定データ - コード補完問題の正解
+ * @type {Object.<string, {inputs: string[], answers: string[], validation: string}>}
+ */
 window.BLANK_ANSWERS = {
-  // Step1: if文の基本
   11: {
     inputs: [".js-blank--1", ".js-blank--2"],
     answers: ["if", ">="],
@@ -46,8 +40,6 @@ window.BLANK_ANSWERS = {
     answers: ["if", "60"],
     validation: "default",
   },
-
-  // Step2: if-else文
   21: {
     inputs: [".js-blank--5", ".js-blank--6"],
     answers: ["===", "else"],
@@ -58,8 +50,6 @@ window.BLANK_ANSWERS = {
     answers: ["成人", "未成年"],
     validation: "flexible_quote",
   },
-
-  // Step3: else if（複数条件分岐）
   31: {
     inputs: [".js-blank--9", ".js-blank--10"],
     answers: ["else", "if"],
@@ -70,8 +60,6 @@ window.BLANK_ANSWERS = {
     answers: ["おはよう", "こんにちは"],
     validation: "flexible_quote",
   },
-
-  // Step4: 比較演算子
   41: {
     inputs: [".js-blank--13"],
     answers: ["==="],
@@ -82,8 +70,6 @@ window.BLANK_ANSWERS = {
     answers: [">=", "<="],
     validation: "default",
   },
-
-  // Step5: 論理演算子
   51: {
     inputs: [".js-blank--16"],
     answers: ["&&"],
@@ -94,8 +80,6 @@ window.BLANK_ANSWERS = {
     answers: ["||"],
     validation: "default",
   },
-
-  // Step6: switch文
   61: {
     inputs: [".js-blank--18", ".js-blank--19", ".js-blank--20", ".js-blank--21"],
     answers: ["switch", "case", "break", "default"],
@@ -106,8 +90,6 @@ window.BLANK_ANSWERS = {
     answers: ["月曜日", "火曜日"],
     validation: "flexible_quote",
   },
-
-  // Step7: 三項演算子
   71: {
     inputs: [".js-blank--24", ".js-blank--25"],
     answers: ["?", ":"],

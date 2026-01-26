@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript練習 - Lesson5</title>
+    <link rel="stylesheet" href="../common/assets/css/reset.css" />
+    <link rel="stylesheet" href="../common/assets/css/base.css" />
+    <link rel="stylesheet" href="../common/assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="l-wrapper">
+      <header class="l-header">
+        <div class="p-headerTitle">
+          <span class="material-icons">school</span>
+          <h1 class="c-title-top">JavaScript Lesson5</h1>
+        </div>
+        <p class="c-title-sub">ループ処理で繰り返しを効率的に実装しよう！</p>
+      </header>
+      <main class="l-main">
+        <!-- Step1 -->
+        <div class="p-section js-section">
+          <div class="p-section__title">
+            <div class="p-section__title--content">
+              <div class="p-section__title--top">
+                <span class="material-icons">auto_awesome</span>
+                <p>Step1: for文（固定回数ループ）</p>
+              </div>
+              <span class="c-useCase">決まった回数だけ同じ処理を繰り返して、プログラムが効率よく動くようにします。</span>
+            </div>
+            <a href="#" target="_blank" class="c-link js-tooltip" data-tooltip="解説を読む">
+              <span class="material-icons">menu_book</span>
+            </a>
+          </div>
+          <div class="p-section__step js-tab">
+            <button class="c-tab js-tab-btn is-active" data-tab="quiz"><span class="material-icons">live_help</span> 出力予想</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="blank"><span class="material-icons">build</span> コード補完</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="task"><span class="material-icons">edit</span> 提出課題</button>
+          </div>
+          <!-- 出力予想 -->
+          <div class="p-section__tab js-tab-content is-active" data-tab-content="quiz">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-quiz">
+              <div class="p-quiz__container">
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q1: コンソールに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    for (let i = 0; i < 3; i++) {<br />
+                    &nbsp;&nbsp;console.log(i);<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_1" value="a" /> 1 2 3</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_1" value="b" /> 0 1 2 3</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_1" value="c" /> 0 1 2</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_1" value="d" /> 1 2 3 4</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--51">
+                    <span class="js-quiz-message--51 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--51 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--51 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      正解は「0 1 2」です。<br />
+                      for文は初期値0から始まり、条件 i &lt; 3 を満たす間繰り返します。
+                    </span>
+                  </div>
+                  <button data-quiz-id="q5_1" data-step-question-id="51" class="c-btn">答えを確認</button>
+                </div>
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q2: コンソールに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    for (let i = 1; i <= 5; i++) {<br />
+                    &nbsp;&nbsp;console.log("保存しています。");<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_2" value="a" /> 保存しています。(4回表示)</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_2" value="b" /> 保存しています。(5回表示)</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_2" value="c" /> 1 2 3 4</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_2" value="d" /> 1 2 3 4 5</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--52">
+                    <span class="js-quiz-message--52 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--52 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--52 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      正解は「保存しています。(5回表示)」です。<br />
+                      i は1から5まで変化しますが、出力するのは i ではなく文字列です。
+                    </span>
+                  </div>
+                  <button data-quiz-id="q5_2" data-step-question-id="52" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- コード補完 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="blank">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-blank">
+              <div class="p-blank__container">
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q1: 以下のコードを完成させて、0から4までの数字をコンソールに表示してください。</h4>
+                  <div class="c-code -blank">
+                    for (let i = <label for="blank-511" class="c-label-input">Initial value</label> <input type="text" class="c-input js-blank--51-1" id="blank-511" placeholder="①" />; i &lt;
+                    <label for="blank-512" class="c-label-input">End condition value</label>
+                    <input type="text" class="c-input js-blank--51-2" id="blank-512" placeholder="②" />; i++) {<br />
+                    &nbsp;&nbsp;console.log(i);<br />
+                    }
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--51">
+                    <span class="js-blank-message--51 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--51 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--51 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      正解は ①0 ②5 です。<br />
+                      for文の初期値iは0から始まり、i &lt; 5という条件でループします。i &lt; 5は「iが5未満の間」という意味なので、iが0,1,2,3,4の時にループが実行されます。
+                    </span>
+                  </div>
+                  <button data-blank-id="51" class="c-btn">答えを確認</button>
+                </div>
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q2: 以下のコードを完成させて、1の二乗、2の二乗、3の二乗をコンソールに表示してください。</h4>
+                  <div class="c-code -blank">
+                    for (<input type="text" class="c-input js-blank--52-1" placeholder="①" />; i &lt;= 3; i++) {<br />
+                    &nbsp;&nbsp;console.log(<input type="text" class="c-input js-blank--52-2" placeholder="②" />);<br />
+                    }
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--52">
+                    <span class="js-blank-message--52 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--52 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--52 u-color-warning u-hide">
+                      ✕ 不正解。
+                      <br />もう一度確認してください。
+                    </span>
+                  </div>
+                  <button data-blank-id="52" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 提出課題 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="task">
+            <div class="p-desc">
+              <p class="c-text">提出課題です。curriculum.jsファイルに実装してください。</p>
+            </div>
+            <div id="q1" class="p-practice">
+              <h2 class="c-title-lesson">数値ループ練習</h2>
+              <div class="p-practice__inner">
+                <div class="p-practice__card"><p class="js-countDown-step1"></p></div>
+                <div class="p-practice__card">
+                  <span>合計は</span>
+                  <span class="js-number-step1">0</span>
+                  <span>です。</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-task">
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S1-1</span>
+                <span class="u-flex-1">
+                  for文を使って、1から5までの数字をコンソールへ出力してください。<br />
+                  出力例：1 2 3 4 5
+                </span>
+              </div>
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S1-2</span>
+                <span class="u-flex-1">
+                  for文を使って、9から1までカウントダウンを'js-countDown-step1'要素のテキストに表示してください。<br />
+                  出力例：987654321
+                </span>
+              </div>
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S1-3</span>
+                <span class="u-flex-1">
+                  for文を使って1から10までの数字を順番に足し、合計を'js-number-step1'要素のテキストへ出力してください。<br />
+                  出力例：55
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Step2 -->
+        <div class="p-section js-section">
+          <div class="p-section__title">
+            <div class="p-section__title--content">
+              <div class="p-section__title--top">
+                <span class="material-icons">auto_awesome</span>
+                <p>Step2: for文（要素ループ）</p>
+              </div>
+              <span class="c-useCase">複数の要素を順番に処理して、プログラムがそれぞれに同じ操作を自動で行うようにします。</span>
+            </div>
+            <a href="#" target="_blank" class="c-link js-tooltip" data-tooltip="解説を読む">
+              <span class="material-icons">menu_book</span>
+            </a>
+          </div>
+          <div class="p-section__step js-tab">
+            <button class="c-tab js-tab-btn is-active" data-tab="quiz"><span class="material-icons">live_help</span> 出力予想</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="blank"><span class="material-icons">build</span> コード補完</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="task"><span class="material-icons">edit</span> 提出課題</button>
+          </div>
+
+          <!-- 出力予想 -->
+          <div class="p-section__tab js-tab-content is-active" data-tab-content="quiz">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-quiz">
+              <div class="p-quiz__container">
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q1: コンソールに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code -ref">
+                    &lt;span class="item"&gt;top&lt;/span&gt;<br />
+                    &lt;span class="item"&gt;middle&lt;/span&gt;<br />
+                    &lt;span class="item"&gt;bottom&lt;/span&gt;<br />
+                  </div>
+                  <div class="c-code">
+                    const items = document.querySelectorAll('.item');<br />
+                    for (let i = 0; i &lt; items.length; i++) {<br />
+                    &nbsp;&nbsp;console.log(i);<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_21" value="a" /> 1 2 3</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_21" value="b" /> 0 1 2</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_21" value="c" /> 3</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_21" value="d" /> top middle bottom</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--21">
+                    <span class="js-quiz-message--21 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--21 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--21 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      正解は「0 1 2」です。<br />
+                      querySelectorAllで取得した要素数分ループし、インデックス番号0から2が表示されます。
+                    </span>
+                  </div>
+                  <button data-quiz-id="q5_21" data-step-question-id="21" class="c-btn">答えを確認</button>
+                </div>
+
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q2: ブラウザに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code -ref">
+                    &lt;button class="js-btn"&gt;開始&lt;/button&gt;<br />
+                    &lt;button class="js-btn"&gt;終了&lt;/button&gt;
+                  </div>
+                  <div class="c-code">
+                    const buttons = document.querySelectorAll('.js-btn');<br />
+                    for (let i = 0; i &lt; buttons.length; i++) {<br />
+                    &nbsp;&nbsp;buttons[i].textContent = "クリック";<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_22" value="a" /> 開始ボタンだけ「クリック」に変更される</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_22" value="b" /> すべてのボタンが「クリック」に変更される</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_22" value="c" /> 終了ボタンだけ「クリック」に変更される</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_22" value="d" /> 「クリック」ボタンが作成される</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--22">
+                    <span class="js-quiz-message--22 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--22 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--22 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      正解は「すべてのボタンが『クリック』に変更される」です。<br />
+                      for文で全要素をループし、それぞれのtextContentを変更しています。
+                    </span>
+                  </div>
+                  <button data-quiz-id="q5_22" data-step-question-id="22" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- コード補完 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="blank">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-blank">
+              <div class="p-blank__container">
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q1: 以下のコードを完成させて、すべての'.card'要素のテキストを「カード」に変更してください。</h4>
+                  <div class="c-code -blank">
+                    const cards = <input type="text" class="c-input js-blank--21-1" placeholder="①" />;<br />
+                    for (let i = 0; i &lt; <input type="text" class="c-input js-blank--21-2" placeholder="②" />; i++) {<br />
+                    &nbsp;&nbsp;cards[i].textContent = "カード";<br />
+                    }
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--21">
+                    <span class="js-blank-message--21 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--21 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--21 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      もう一度確認してください。
+                    </span>
+                  </div>
+                  <button data-blank-id="21" class="c-btn">答えを確認</button>
+                </div>
+
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q2: 以下のコードを完成させて、すべての'.item'要素に'.active'クラスを追加してください。</h4>
+                  <div class="c-code -blank">
+                    const items = document.querySelectorAll('.item');<br />
+                    for (<input type="text" class="c-input js-blank--22-1" placeholder="①" />; i &lt; items.length; <input type="text" class="c-input js-blank--22-2" placeholder="②" />) {<br />
+                    &nbsp;&nbsp;items[i].classList.add('active');<br />
+                    }
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--22">
+                    <span class="js-blank-message--22 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--22 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--22 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      もう一度確認してください。
+                    </span>
+                  </div>
+                  <button data-blank-id="22" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 提出課題 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="task">
+            <div class="p-desc">
+              <p class="c-text">提出課題です。curriculum.jsファイルに実装してください。</p>
+            </div>
+            <div id="q2" class="p-practice">
+              <h2 class="c-title-lesson">要素ループ練習</h2>
+              <div class="p-practice__inner">
+                <div>
+                  <button class="c-button-practice js-btn-step2">ボタン1</button>
+                  <button class="c-button-practice js-btn-step2">ボタン2</button>
+                  <button class="c-button-practice js-btn-step2">ボタン3</button>
+                </div>
+              </div>
+            </div>
+            <div class="p-task">
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S2-1</span>
+                <span class="u-flex-1">すべての'.js-btn-step2'要素を全てまとめて取得して、for文で1つずつ取り出しコンソールに表示してください。</span>
+              </div>
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S2-1</span>
+                <span class="u-flex-1">for文を使ってすべての'.js-btn-step2'要素のテキストを「更新」に変更してください。</span>
+              </div>
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S2-2</span>
+                <span class="u-flex-1">for文を使ってすべての'.js-btn-step2'要素にdisabled属性を付与してください。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step3 -->
+        <div class="p-section js-section">
+          <div class="p-section__title">
+            <div class="p-section__title--content">
+              <div class="p-section__title--top">
+                <span class="material-icons">auto_awesome</span>
+                <p>Step3: while文</p>
+              </div>
+              <span class="c-useCase">条件が成り立っている間、同じ処理を繰り返します。</span>
+            </div>
+            <a href="#" target="_blank" class="c-link js-tooltip" data-tooltip="解説を読む">
+              <span class="material-icons">menu_book</span>
+            </a>
+          </div>
+
+          <div class="p-section__step js-tab">
+            <button class="c-tab js-tab-btn is-active" data-tab="quiz"><span class="material-icons">live_help</span> 出力予想</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="blank"><span class="material-icons">build</span> コード補完</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="task"><span class="material-icons">edit</span> 提出課題</button>
+          </div>
+
+          <!-- 出力予想 -->
+          <div class="p-section__tab js-tab-content is-active" data-tab-content="quiz">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-quiz">
+              <div class="p-quiz__container">
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q1: コンソールに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    let count = 0;<br />
+                    while (count &lt; 3) {<br />
+                    &nbsp;&nbsp;console.log(count);<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_3" value="a" /> 0 1 2</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_3" value="b" /> 0 1 2 3</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_3" value="c" /> 1 2 3</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_3" value="d" /> 無限ループになる</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--53">
+                    <span class="js-quiz-message--53 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--53 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--53 u-color-warning u-hide"
+                      >✕ 不正解。<br />
+                      正解は「無限ループになる」です。<br />
+                      countが増加しないため、条件count &lt; 3が常に真となり、ループが終わりません。
+                    </span>
+                  </div>
+                  <button data-quiz-id="q5_3" data-step-question-id="53" class="c-btn">答えを確認</button>
+                </div>
+
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q2: ブラウザに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    let input = "";<br />
+                    while (input === "") {<br />
+                    &nbsp;&nbsp;input = prompt("名前を入力してください。");<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_4" value="a" /> 何も入力しない限り何度もダイアログが表示される</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_4" value="b" /> 一度だけダイアログが表示される</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_4" value="c" /> 何も起こらず、画面は変わらない</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_4" value="d" /> 常にダイアログが表示される</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--54">
+                    <span class="js-quiz-message--54 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--54 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--54 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      正解は「何も入力しない限り何度もダイアログが表示される」です。<br />
+                      inputが空文字の間は条件がtrueのため入力されるまでpromptが繰り返し表示されます。
+                    </span>
+                  </div>
+                  <button data-quiz-id="q5_4" data-step-question-id="54" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- コード補完 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="blank">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-blank">
+              <div class="p-blank__container">
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q1: 以下のコードを完成させて、0から4までの数字をコンソールに表示してください。</h4>
+                  <div class="c-code -blank">
+                    <input type="text" class="c-input js-blank--53-1" placeholder="①" />;<br />
+                    while (count &lt; 5) {<br />
+                    &nbsp;&nbsp;console.log(count);<br />
+                    &nbsp;&nbsp;<input type="text" class="c-input js-blank--53-2" placeholder="②" />;<br />
+                    }
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--53">
+                    <span class="js-blank-message--53 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--53 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--53 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      もう一度確認してください。
+                    </span>
+                  </div>
+                  <button data-blank-id="53" class="c-btn">答えを確認</button>
+                </div>
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q2: 以下のコードを完成させて、1から5までの数字をコンソールに表示してください。</h4>
+                  <div class="c-code -blank">
+                    let num = 1;<br />
+                    <input type="text" class="c-input js-blank--54-1" placeholder="①" /> {<br />
+                    &nbsp;&nbsp;console.log(num);<br />
+                    &nbsp;&nbsp;<input type="text" class="c-input js-blank--54-2" placeholder="②" />;<br />
+                    }
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--54">
+                    <span class="js-blank-message--54 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--54 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--54 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      もう一度確認してください。
+                    </span>
+                  </div>
+                  <button data-blank-id="54" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 提出課題 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="task">
+            <div class="p-desc">
+              <p class="c-text">提出課題です。curriculum.jsファイルに実装してください。</p>
+            </div>
+            <div id="q3" class="p-practice">
+              <h2 class="c-title-lesson">while文練習</h2>
+              <div class="p-practice__inner">
+                <div class="p-practice__card">
+                  <p class="js-num-step3"></p>
+                </div>
+                <div class="p-practice__card">
+                  <p class="js-text-step3"></p>
+                </div>
+              </div>
+            </div>
+            <div class="p-task">
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S3-1</span>
+                <span class="u-flex-1">while文を使って、0から10までの偶数のみを'.js-num-step3'要素のテキストに表示してください。</span>
+              </div>
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S3-2</span>
+                <span class="u-flex-1">
+                  while文とpromptを使って、ダイアログに文字が入力されるまで入力を求めてください。<br />
+                  入力後に'.js-text-step3'要素のテキストへ入力された文字を表示してください。
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Step4 -->
+        <div class="p-section js-section">
+          <div class="p-section__title">
+            <div class="p-section__title--content">
+              <div class="p-section__title--top">
+                <span class="material-icons">auto_awesome</span>
+                <p>Step4: do-while文</p>
+              </div>
+              <span class="c-useCase">最低1回は必ず処理を実行し、そのあと条件が成り立っている間、同じ処理を繰り返します。</span>
+            </div>
+            <a href="#" target="_blank" class="c-link js-tooltip" data-tooltip="解説を読む">
+              <span class="material-icons">menu_book</span>
+            </a>
+          </div>
+
+          <div class="p-section__step js-tab">
+            <button class="c-tab js-tab-btn is-active" data-tab="quiz"><span class="material-icons">live_help</span> 出力予想</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="blank"><span class="material-icons">build</span> コード補完</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="task"><span class="material-icons">edit</span> 提出課題</button>
+          </div>
+
+          <!-- 出力予想 -->
+          <div class="p-section__tab js-tab-content is-active" data-tab-content="quiz">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-quiz">
+              <div class="p-quiz__container">
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q1: ブラウザに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    let retry;<br />
+                    do {<br />
+                    &nbsp;&nbsp;alert('ガチャを引きました');<br />
+                    &nbsp;&nbsp;retry = prompt('もう一度引きますか？（はい / いいえ）');<br />
+                    } while (retry === 'はい');
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_5" value="a" /> 「もう一度引きますか？」だけが表示される</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_5" value="b" /> 「ガチャを引きました」が必ず1回は表示される</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_5" value="c" /> 「はい」と入力しないと何も表示されない</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_5" value="d" /> 何も表示されない場合がある</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--55">
+                    <span class="js-quiz-message--55 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--55 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--55 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      正解は「『ガチャを引きました』が必ず1回は表示される」です。<br />
+                      条件に関係なく最初に1回は処理が実行されます。
+                    </span>
+                  </div>
+                  <button data-quiz-id="q5_5" data-step-question-id="55" class="c-btn">答えを確認</button>
+                </div>
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q2: ブラウザに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    let name;<br />
+                    do {<br />
+                    &nbsp;&nbsp;name = prompt('名前を入力してください');<br />
+                    } while (name === '');<br />
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_6" value="a" /> 最初は何も表示されない</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_6" value="b" /> 名前を入力しなくても、1回は入力画面が表示される</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_6" value="c" /> 名前を入力すると、必ずもう一度入力画面が表示される</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_6" value="d" /> 「はい」と入力しないと終了しない</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--56">
+                    <span class="js-quiz-message--56 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--56 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--56 u-color-warning u-hide">✕ 不正解。<br />正解は「1 2 3」です。iが3以下の間、ループが継続します。</span>
+                  </div>
+                  <button data-quiz-id="q5_6" data-step-question-id="56" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- コード補完 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="blank">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-blank">
+              <div class="p-blank__container">
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q1: 以下のコードを完成させて、0から2までの数字をコンソールに表示してください。</h4>
+                  <div class="c-code -blank">
+                    let num = 0;<br />
+                    <input type="text" class="c-input js-blank--55-1" placeholder="①" /> {<br />
+                    &nbsp;&nbsp;console.log(num);<br />
+                    &nbsp;&nbsp;num++;<br />
+                    } <input type="text" class="c-input js-blank--55-2" placeholder="②" />;
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--55">
+                    <span class="js-blank-message--55 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--55 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--55 u-color-warning u-hide">✕ 不正解。もう一度確認してください。</span>
+                  </div>
+                  <button data-blank-id="55" class="c-btn">答えを確認</button>
+                </div>
+
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q2: 以下のコードを完成させて、1から3までの数字をコンソールに表示してください。</h4>
+                  <div class="c-code -blank">
+                    let count = 1;<br />
+                    do {<br />
+                    &nbsp;&nbsp;console.log(count);<br />
+                    &nbsp;&nbsp;<input type="text" class="c-input js-blank--56-1" placeholder="①" />;<br />
+                    } <input type="text" class="c-input js-blank--56-2" placeholder="②" />;
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--56">
+                    <span class="js-blank-message--56 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--56 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--56 u-color-warning u-hide">✕ 不正解。もう一度確認してください。</span>
+                  </div>
+                  <button data-blank-id="56" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 提出課題 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="task">
+            <div class="p-desc">
+              <p class="c-text">提出課題です。curriculum.jsファイルに実装してください。</p>
+            </div>
+
+            <div class="p-practice">
+              <h2 class="c-title-lesson">do-while文練習</h2>
+              <div class="p-practice__inner">
+                <div class="js-doWhileResult-stepFour"></div>
+                <div class="js-numberRange-stepFour"></div>
+              </div>
+            </div>
+
+            <div class="p-task">
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S4-1</span>
+                <span class="u-flex-1">do-while文を使って、条件を満たすまで処理を繰り返してください。</span>
+              </div>
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S4-2</span>
+                <span class="u-flex-1">do-while文を使って、1から5までの数字を画面に表示してください。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step5 -->
+        <div class="p-section js-section">
+          <div class="p-section__title">
+            <div class="p-section__title--content">
+              <div class="p-section__title--top">
+                <span class="material-icons">auto_awesome</span>
+                <p>Step5: break と continue</p>
+              </div>
+              <span class="c-useCase">実際の使用場面: 検索処理の終了、特定条件のスキップ、エラー時の処理中断</span>
+            </div>
+            <a href="#" target="_blank" class="c-link js-tooltip" data-tooltip="解説を読む">
+              <span class="material-icons">menu_book</span>
+            </a>
+          </div>
+
+          <div class="p-section__step js-tab">
+            <button class="c-tab js-tab-btn is-active" data-tab="quiz"><span class="material-icons">live_help</span> 出力予想</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="blank"><span class="material-icons">build</span> コード補完</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="task"><span class="material-icons">edit</span> 提出課題</button>
+          </div>
+
+          <!-- 出力予想 -->
+          <div class="p-section__tab js-tab-content is-active" data-tab-content="quiz">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-quiz">
+              <div class="p-quiz__container">
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q1: ブラウザに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    for (let i = 0; i &lt; 5; i++) {<br />
+                    &nbsp;&nbsp;if (i === 3) break;<br />
+                    &nbsp;&nbsp;console.log(i);<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_7" value="a" /> 0 1 2</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_7" value="b" /> 0 1 2 3</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_7" value="c" /> 0 1 2 3 4</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_7" value="d" /> 0 1 2 4</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--57">
+                    <span class="js-quiz-message--57 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--57 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--57 u-color-warning u-hide">✕ 不正解。<br />正解は「0 1 2」です。iが3になった時点でbreakが実行され、ループが終了します。</span>
+                  </div>
+                  <button data-quiz-id="q5_7" data-step-question-id="57" class="c-btn">答えを確認</button>
+                </div>
+
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q2: ブラウザに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    for (let i = 0; i &lt; 5; i++) {<br />
+                    &nbsp;&nbsp;if (i === 2) continue;<br />
+                    &nbsp;&nbsp;console.log(i);<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_8" value="a" /> 0 1 2 3 4</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_8" value="b" /> 0 1 3 4</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_8" value="c" /> 0 1 2</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_8" value="d" /> 0 1</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--58">
+                    <span class="js-quiz-message--58 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--58 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--58 u-color-warning u-hide">✕ 不正解。<br />正解は「0 1 3 4」です。iが2の時のみcontinueが実行され、その回の処理がスキップされます。</span>
+                  </div>
+                  <button data-quiz-id="q5_8" data-step-question-id="58" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- コード補完 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="blank">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-blank">
+              <div class="p-blank__container">
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q1: 以下のコードを完成させて、0から9までループし、5になったらループを終了してください。</h4>
+                  <div class="c-code -blank">
+                    for (let i = 0; i &lt; 10; i++) {<br />
+                    &nbsp;&nbsp;if (i === 5) <input type="text" class="c-input js-blank--57-1" placeholder="①" />;<br />
+                    &nbsp;&nbsp;if (i % 2 === 1) <input type="text" class="c-input js-blank--57-2" placeholder="②" />;<br />
+                    &nbsp;&nbsp;console.log(i);<br />
+                    }
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--57">
+                    <span class="js-blank-message--57 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--57 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--57 u-color-warning u-hide">✕ 不正解。もう一度確認してください。</span>
+                  </div>
+                  <button data-blank-id="57" class="c-btn">答えを確認</button>
+                </div>
+
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q2: 以下のコードを完成させて、1から10までループし、7になったら終了し、奇数をスキップしてください。</h4>
+                  <div class="c-code -blank">
+                    for (let i = 1; i &lt;= 10; i++) {<br />
+                    &nbsp;&nbsp;<input type="text" class="c-input js-blank--58-1" placeholder="①" />;<br />
+                    &nbsp;&nbsp;if (i % 2 === 1) <input type="text" class="c-input js-blank--58-2" placeholder="②" />;<br />
+                    &nbsp;&nbsp;console.log(i);<br />
+                    }
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--58">
+                    <span class="js-blank-message--58 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--58 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--58 u-color-warning u-hide">✕ 不正解。もう一度確認してください。</span>
+                  </div>
+                  <button data-blank-id="58" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 提出課題 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="task">
+            <div class="p-desc">
+              <p class="c-text">提出課題です。curriculum.jsファイルに実装してください。</p>
+            </div>
+
+            <div class="p-practice">
+              <h2 class="c-title-lesson">break/continue練習</h2>
+              <div class="p-practice__inner">
+                <div class="js-evenNumbers-stepFive"></div>
+                <div class="js-searchResult-stepFive"></div>
+              </div>
+            </div>
+
+            <div class="p-task">
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S5-1</span>
+                <span class="u-flex-1">1から20までループし、偶数のみ表示してください（continueを使用）。また、10より大きい数になったらループを終了してください（breakを使用）。</span>
+              </div>
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S5-2</span>
+                <span class="u-flex-1">以下の配列から50以上の数値を見つけたらループを終了し、その数値を画面に表示してください。<br />const numbers = [10, 25, 30, 55, 70, 85];</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step6 -->
+        <div class="p-section js-section">
+          <div class="p-section__title">
+            <div class="p-section__title--content">
+              <div class="p-section__title--top">
+                <span class="material-icons">auto_awesome</span>
+                <p>Step6: ネストされたループ</p>
+              </div>
+              <span class="c-useCase">実際の使用場面: テーブルの生成、二次元データの処理、組み合わせの計算</span>
+            </div>
+            <a href="#" target="_blank" class="c-link js-tooltip" data-tooltip="解説を読む">
+              <span class="material-icons">menu_book</span>
+            </a>
+          </div>
+
+          <div class="p-section__step js-tab">
+            <button class="c-tab js-tab-btn is-active" data-tab="quiz"><span class="material-icons">live_help</span> 出力予想</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="blank"><span class="material-icons">build</span> コード補完</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="task"><span class="material-icons">edit</span> 提出課題</button>
+          </div>
+
+          <!-- 出力予想 -->
+          <div class="p-section__tab js-tab-content is-active" data-tab-content="quiz">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-quiz">
+              <div class="p-quiz__container">
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q1: ブラウザに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    for (let i = 1; i &lt;= 2; i++) {<br />
+                    &nbsp;&nbsp;for (let j = 1; j &lt;= 2; j++) {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(i + "-" + j);<br />
+                    &nbsp;&nbsp;}<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_9" value="a" /> 1-1 2-2</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_9" value="b" /> 1-1 1-2 2-1</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_9" value="c" /> 1-1 1-2 2-1 2-2</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_9" value="d" /> 1 2 1 2</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--59">
+                    <span class="js-quiz-message--59 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--59 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--59 u-color-warning u-hide">✕ 不正解。<br />正解は「1-1 1-2 2-1 2-2」です。外側のループが1回実行されるごとに、内側のループが2回実行されます。</span>
+                  </div>
+                  <button data-quiz-id="q5_9" data-step-question-id="59" class="c-btn">答えを確認</button>
+                </div>
+
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q2: ブラウザに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    for (let i = 2; i &lt;= 3; i++) {<br />
+                    &nbsp;&nbsp;for (let j = 1; j &lt;= 2; j++) {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(i * j);<br />
+                    &nbsp;&nbsp;}<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_10" value="a" /> 2 3 4 6</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_10" value="b" /> 2 4 3 6</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_10" value="c" /> 2 3</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_10" value="d" /> 4 6</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--510">
+                    <span class="js-quiz-message--510 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--510 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--510 u-color-warning u-hide">✕ 不正解。<br />正解は「2 4 3 6」です。i=2の時、2×1=2、2×2=4。i=3の時、3×1=3、3×2=6が表示されます。</span>
+                  </div>
+                  <button data-quiz-id="q5_10" data-step-question-id="510" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- コード補完 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="blank">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-blank">
+              <div class="p-blank__container">
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q1: 以下のコードを完成させて、3×3の組み合わせを表示してください。</h4>
+                  <div class="c-code -blank">
+                    for (<input type="text" class="c-input js-blank--59-1" placeholder="①" />; <input type="text" class="c-input js-blank--59-2" placeholder="②" />; i++) {<br />
+                    &nbsp;&nbsp;for (<input type="text" class="c-input js-blank--59-3" placeholder="③" />; j &lt;= 3; j++) {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(i + " × " + j);<br />
+                    &nbsp;&nbsp;}<br />
+                    }
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--59">
+                    <span class="js-blank-message--59 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--59 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--59 u-color-warning u-hide">✕ 不正解。もう一度確認してください。</span>
+                  </div>
+                  <button data-blank-id="59" class="c-btn">答えを確認</button>
+                </div>
+
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q2: 以下のコードを完成させて、掛け算の結果を表示してください。</h4>
+                  <div class="c-code -blank">
+                    for (let i = 2; i &lt;= 3; i++) {<br />
+                    &nbsp;&nbsp;for (let j = 1; <input type="text" class="c-input js-blank--510-1" placeholder="①" />; j++) {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(<input type="text" class="c-input js-blank--510-2" placeholder="②" />);<br />
+                    &nbsp;&nbsp;}<br />
+                    }
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--510">
+                    <span class="js-blank-message--510 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--510 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--510 u-color-warning u-hide">✕ 不正解。もう一度確認してください。</span>
+                  </div>
+                  <button data-blank-id="510" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 提出課題 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="task">
+            <div class="p-desc">
+              <p class="c-text">提出課題です。curriculum.jsファイルに実装してください。</p>
+            </div>
+
+            <div class="p-practice">
+              <h2 class="c-title-lesson">ネストループ練習</h2>
+              <div class="p-practice__inner">
+                <div class="js-multiTable-stepSix"></div>
+                <div class="js-triangle-stepSix"></div>
+              </div>
+            </div>
+
+            <div class="p-task">
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S6-1</span>
+                <span class="u-flex-1">ネストされたループを使って、九九表（1の段～9の段）を画面に表示してください。</span>
+              </div>
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S6-2</span>
+                <span class="u-flex-1">ネストされたループを使って、以下のような三角形を画面に表示してください。<br />*<br />**<br />***<br />****<br />*****</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step7 -->
+        <div class="p-section js-section">
+          <div class="p-section__title">
+            <div class="p-section__title--content">
+              <div class="p-section__title--top">
+                <span class="material-icons">auto_awesome</span>
+                <p>Step7: 配列とループの組み合わせ</p>
+              </div>
+              <span class="c-useCase">実際の使用場面: 商品リストの表示、ユーザーデータの処理、検索結果の表示</span>
+            </div>
+            <a href="#" target="_blank" class="c-link js-tooltip" data-tooltip="解説を読む">
+              <span class="material-icons">menu_book</span>
+            </a>
+          </div>
+
+          <div class="p-section__step js-tab">
+            <button class="c-tab js-tab-btn is-active" data-tab="quiz"><span class="material-icons">live_help</span> 出力予想</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="blank"><span class="material-icons">build</span> コード補完</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="task"><span class="material-icons">edit</span> 提出課題</button>
+          </div>
+
+          <!-- 出力予想 -->
+          <div class="p-section__tab js-tab-content is-active" data-tab-content="quiz">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-quiz">
+              <div class="p-quiz__container">
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q1: ブラウザに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    const colors = ["赤", "青", "緑"];<br />
+                    for (let i = 0; i &lt; colors.length; i++) {<br />
+                    &nbsp;&nbsp;console.log(colors[i]);<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_11" value="a" /> 赤 青 緑</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_11" value="b" /> 0 1 2</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_11" value="c" /> 赤 青</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_11" value="d" /> colors[0] colors[1] colors[2]</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--511">
+                    <span class="js-quiz-message--511 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--511 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--511 u-color-warning u-hide">✕ 不正解。<br />正解は「赤 青 緑」です。配列の各要素が順番に表示されます。</span>
+                  </div>
+                  <button data-quiz-id="q5_11" data-step-question-id="511" class="c-btn">答えを確認</button>
+                </div>
+
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q2: ブラウザに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    const nums = [10, 20, 30];<br />
+                    for (let i = 0; i &lt; nums.length; i++) {<br />
+                    &nbsp;&nbsp;console.log(nums[i] + 5);<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_12" value="a" /> 10 20 30</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_12" value="b" /> 5 10 15</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_12" value="c" /> 15 25 35</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_12" value="d" /> 105 205 305</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--512">
+                    <span class="js-quiz-message--512 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--512 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--512 u-color-warning u-hide">✕ 不正解。<br />正解は「15 25 35」です。各要素に5を加算した値が表示されます。</span>
+                  </div>
+                  <button data-quiz-id="q5_12" data-step-question-id="512" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- コード補完 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="blank">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-blank">
+              <div class="p-blank__container">
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q1: 以下のコードを完成させて、配列の各要素を表示してください。</h4>
+                  <div class="c-code -blank">
+                    const fruits = ["りんご", "バナナ", "オレンジ"];<br />
+                    for (let i = 0; i &lt; <input type="text" class="c-input js-blank--511-1" placeholder="①" />; i++) {<br />
+                    &nbsp;&nbsp;console.log(<input type="text" class="c-input js-blank--511-2" placeholder="②" />);<br />
+                    }
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--511">
+                    <span class="js-blank-message--511 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--511 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--511 u-color-warning u-hide">✕ 不正解。もう一度確認してください。</span>
+                  </div>
+                  <button data-blank-id="511" class="c-btn">答えを確認</button>
+                </div>
+
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q2: 以下のコードを完成させて、配列の各要素とインデックスを表示してください。</h4>
+                  <div class="c-code -blank">
+                    const colors = ["赤", "青", "黄"];<br />
+                    for (let i = 0; i &lt; <input type="text" class="c-input js-blank--512-1" placeholder="①" />; i++) {<br />
+                    &nbsp;&nbsp;console.log(<input type="text" class="c-input js-blank--512-2" placeholder="②" /> + "番目: " + colors[i]);<br />
+                    }
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--512">
+                    <span class="js-blank-message--512 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--512 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--512 u-color-warning u-hide">✕ 不正解。もう一度確認してください。</span>
+                  </div>
+                  <button data-blank-id="512" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 提出課題 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="task">
+            <div class="p-desc">
+              <p class="c-text">提出課題です。curriculum.jsファイルに実装してください。</p>
+            </div>
+
+            <div class="p-practice">
+              <h2 class="c-title-lesson">配列操作練習</h2>
+              <div class="p-practice__inner">
+                <div class="js-animalList-stepSeven"></div>
+                <div class="js-fruitList-stepSeven"></div>
+              </div>
+            </div>
+
+            <div class="p-task">
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S7-1</span>
+                <span class="u-flex-1">以下の配列の各要素を、ループを使って画面に表示してください。<br />const animals = ["犬", "猫", "鳥", "魚", "ウサギ"];</span>
+              </div>
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S7-2</span>
+                <span class="u-flex-1">以下の配列の各要素に「が好きです」を追加して、画面に表示してください。<br />const fruits = ["りんご", "バナナ", "みかん"];</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step8 -->
+        <div class="p-section js-section">
+          <div class="p-section__title">
+            <div class="p-section__title--content">
+              <div class="p-section__title--top">
+                <span class="material-icons">auto_awesome</span>
+                <p>Step8: ループの実践応用</p>
+              </div>
+              <span class="c-useCase">実際の使用場面: 売上合計の計算、平均点の算出、条件に合うデータの抽出</span>
+            </div>
+            <a href="#" target="_blank" class="c-link js-tooltip" data-tooltip="解説を読む">
+              <span class="material-icons">menu_book</span>
+            </a>
+          </div>
+
+          <div class="p-section__step js-tab">
+            <button class="c-tab js-tab-btn is-active" data-tab="quiz"><span class="material-icons">live_help</span> 出力予想</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="blank"><span class="material-icons">build</span> コード補完</button>
+            <button class="c-tab js-tab-btn u-ml-8" data-tab="task"><span class="material-icons">edit</span> 提出課題</button>
+          </div>
+
+          <!-- 出力予想 -->
+          <div class="p-section__tab js-tab-content is-active" data-tab-content="quiz">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-quiz">
+              <div class="p-quiz__container">
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q1: ブラウザに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    const scores = [80, 90, 70];<br />
+                    let sum = 0;<br />
+                    for (let i = 0; i &lt; scores.length; i++) {<br />
+                    &nbsp;&nbsp;sum += scores[i];<br />
+                    }<br />
+                    console.log(sum);
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_13" value="a" /> 80</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_13" value="b" /> 240</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_13" value="c" /> 3</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_13" value="d" /> 80.0</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--513">
+                    <span class="js-quiz-message--513 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--513 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--513 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      正解は「240」です。80 + 90 + 70 = 240となります。
+                    </span>
+                  </div>
+                  <button data-quiz-id="q5_13" data-step-question-id="513" class="c-btn">答えを確認</button>
+                </div>
+
+                <div class="p-quiz__item js-quizItem">
+                  <h4 class="c-title-question">Q2: ブラウザに表示される内容として正しいものを選んでください。</h4>
+                  <div class="c-code">
+                    const nums = [5, 12, 8, 15, 3];<br />
+                    for (let i = 0; i &lt; nums.length; i++) {<br />
+                    &nbsp;&nbsp;if (nums[i] &gt; 10) {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(nums[i]);<br />
+                    &nbsp;&nbsp;}<br />
+                    }
+                  </div>
+                  <div class="p-choice js-choices">
+                    <label class="p-choice__item"><input type="radio" name="q5_14" value="a" /> 12 15</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_14" value="b" /> 5 12 8 15 3</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_14" value="c" /> 15</label>
+                    <label class="p-choice__item"><input type="radio" name="q5_14" value="d" /> 5 8 3</label>
+                  </div>
+                  <div class="p-result u-mb-10 js-quiz-result--514">
+                    <span class="js-quiz-message--514 u-color-message u-hide">選択肢を選んでください。</span>
+                    <span class="js-quiz-correct--514 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-quiz-incorrect--514 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      正解は「12 15」です。10より大きい要素のみが表示されます。
+                    </span>
+                  </div>
+                  <button data-quiz-id="q5_14" data-step-question-id="514" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- コード補完 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="blank">
+            <div class="p-desc">
+              <p class="c-text">提出は必要ありません。コードに触れて慣れてみましょう。</p>
+            </div>
+            <div class="p-blank">
+              <div class="p-blank__container">
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q1: 以下のコードを完成させて、配列の合計と平均を計算してください。</h4>
+                  <div class="c-code -blank">
+                    const numbers = [10, 20, 30, 40];<br />
+                    let sum = 0;<br />
+                    for (let i = 0; i &lt; numbers.length; i++) {<br />
+                    &nbsp;&nbsp;<input type="text" class="c-input js-blank--513-1" placeholder="①" />;<br />
+                    }<br />
+                    const average = <input type="text" class="c-input js-blank--513-2" placeholder="②" />;<br />
+                    console.log("合計: " + sum + ", 平均: " + average);
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--513">
+                    <span class="js-blank-message--513 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--513 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--513 u-color-warning u-hide">✕ 不正解。もう一度確認してください。</span>
+                  </div>
+                  <button data-blank-id="513" class="c-btn">答えを確認</button>
+                </div>
+
+                <div class="p-blank__item js-blankItem">
+                  <h4 class="c-title-question">Q2: 以下のコードを完成させて、80点以上の要素の個数を数えてください。</h4>
+                  <div class="c-code -blank">
+                    const scores = [75, 82, 68, 91, 88, 76, 95];<br />
+                    let count = 0;<br />
+                    for (let i = 0; i &lt; scores.length; i++) {<br />
+                    &nbsp;&nbsp;<input type="text" class="c-input js-blank--514-1" placeholder="①" /> {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="c-input js-blank--514-2" placeholder="②" />;<br />
+                    &nbsp;&nbsp;}<br />
+                    }<br />
+                    console.log("80点以上: " + count + "人");
+                  </div>
+                  <div class="p-result u-mb-10 js-blank-result--514">
+                    <span class="js-blank-message--514 u-color-message u-hide">すべての空欄を埋めてください</span>
+                    <span class="js-blank-correct--514 u-color-normal u-hide">〇 正解！</span>
+                    <span class="js-blank-incorrect--514 u-color-warning u-hide">✕ 不正解。もう一度確認してください。</span>
+                  </div>
+                  <button data-blank-id="514" class="c-btn">答えを確認</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 提出課題 -->
+          <div class="p-section__tab js-tab-content" data-tab-content="task">
+            <div class="p-desc">
+              <p class="c-text">提出課題です。curriculum.jsファイルに実装してください。</p>
+            </div>
+
+            <div class="p-practice">
+              <h2 class="c-title-lesson">ループ応用練習</h2>
+              <div class="p-practice__inner">
+                <div class="js-calcResult-stepEight"></div>
+                <div class="js-countResult-stepEight"></div>
+              </div>
+            </div>
+
+            <div class="p-task">
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S8-1</span>
+                <span class="u-flex-1">以下の配列の合計と平均を計算して画面に表示してください。<br />const scores = [85, 92, 78, 90, 88];</span>
+              </div>
+              <div class="p-task__item">
+                <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S8-2</span>
+                <span class="u-flex-1">以下の配列から80点以上の要素の個数を数えて画面に表示してください。<br />const scores = [75, 82, 68, 91, 88, 76, 95];</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step9 -->
+        <div class="p-section js-section">
+          <div class="p-section__title">
+            <div class="p-section__title--content">
+              <div class="p-section__title--top">
+                <span class="material-icons">auto_awesome</span>
+                <p>Step9: 総合演習</p>
+              </div>
+              <span class="c-useCase">実際の使用場面: ECサイトの商品管理、在庫管理システム、売上分析ダッシュボード</span>
+            </div>
+            <a href="#" target="_blank" class="c-link js-tooltip" data-tooltip="解説を読む">
+              <span class="material-icons">menu_book</span>
+            </a>
+          </div>
+          <!-- 提出課題 -->
+          <div class="p-desc">
+            <p class="c-text">提出課題です。curriculum.jsファイルに実装してください。</p>
+          </div>
+          <div class="p-task">
+            <div class="p-task__item">
+              <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S9-1</span>
+              <div class="p-task__contents u-flex-1">
+                <strong>成績管理システムの集計処理</strong>
+                <div class="p-practice u-mt-8">
+                  <h2 class="c-title-lesson">テスト結果</h2>
+                  <div class="p-practice__inner u-gap-12">
+                    <div class="p-practice__card">
+                      <p>合格者数：<span class="js-passCount-stepNine">-</span>人</p>
+                      <p>不合格者数：<span class="js-failCount-stepNine">-</span>人</p>
+                      <p>最高点：<span class="js-maxScore-stepNine">-</span>点</p>
+                      <p>平均点：<span class="js-avgScore-stepNine">-</span>点</p>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  以下の配列から、60点以上を合格としてカウントし、合格者数を画面に表示する。<br />
+                  60点未満を不合格としてカウントし、不合格者数を画面に表示する。<br />
+                  配列内の最高点を見つけて画面に表示する。<br />
+                  すべての点数の平均を計算して画面に表示する（小数点第1位まで）。<br />
+                  const scores = [85, 42, 78, 95, 53, 88, 67, 72, 91, 58];
+                </p>
+              </div>
+            </div>
+
+            <div class="p-task__item">
+              <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S9-2</span>
+              <div class="p-task__contents u-flex-1">
+                <strong>在庫管理システムの商品リスト表示</strong>
+                <div class="p-practice u-mt-8">
+                  <h2 class="c-title-lesson">商品一覧</h2>
+                  <div class="p-practice__inner u-gap-12">
+                    <div>
+                      <h3>在庫あり商品</h3>
+                      <div class="js-inStock-stepNine"></div>
+                    </div>
+                    <div>
+                      <h3>在庫切れ商品</h3>
+                      <div class="js-outStock-stepNine"></div>
+                    </div>
+                    <div>
+                      <h3>在庫総数</h3>
+                      <div class="js-totalStock-stepNine"></div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  以下の配列をループで処理し、在庫数が1以上の商品名を「・商品名（在庫数：X個）」の形式で在庫あり商品エリアに表示する。<br />
+                  在庫数が0の商品名を「・商品名（在庫切れ）」の形式で在庫切れ商品エリアに表示する。<br />
+                  すべての商品の在庫数を合計し、「合計在庫数：X個」の形式で在庫総数エリアに表示する。<br />
+                  const items = [<br />
+                  &nbsp;&nbsp;{ name: "ノートPC", stock: 5 },<br />
+                  &nbsp;&nbsp;{ name: "マウス", stock: 0 },<br />
+                  &nbsp;&nbsp;{ name: "キーボード", stock: 8 },<br />
+                  &nbsp;&nbsp;{ name: "モニター", stock: 0 },<br />
+                  &nbsp;&nbsp;{ name: "ヘッドセット", stock: 12 }<br />
+                  ];
+                </p>
+              </div>
+            </div>
+
+            <div class="p-task__item">
+              <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L5-S9-3</span>
+              <div class="p-task__contents u-flex-1">
+                <strong>九九表の動的生成と特定条件の抽出</strong>
+                <div class="p-practice u-mt-8">
+                  <h2 class="c-title-lesson">九九表システム</h2>
+                  <div class="p-practice__inner u-gap-12">
+                    <div>
+                      <h3>3の段</h3>
+                      <div class="js-table3-stepNine"></div>
+                    </div>
+                    <div>
+                      <h3>5の段</h3>
+                      <div class="js-table5-stepNine"></div>
+                    </div>
+                    <div>
+                      <h3>7の段</h3>
+                      <div class="js-table7-stepNine"></div>
+                    </div>
+                    <div>
+                      <h3>積が30以上の計算式</h3>
+                      <div class="js-over30-stepNine"></div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  ネストされたループを使って、3の段（3×1から3×9まで）を「3 × 1 = 3」の形式で3の段エリアに表示する。<br />
+                  同様に5の段（5×1から5×9まで）を5の段エリアに、7の段（7×1から7×9まで）を7の段エリアに表示する。<br />
+                  1の段から9の段まですべての計算を行い、積が30以上になる計算式のみを「X × Y =
+                  Z」の形式で抽出し、積が30以上の計算式エリアに表示する（最初の10個まで表示し、10個見つかったらループを終了する）。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../common/assets/js/config.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/curriculum.js"></script>
+    <script src="assets/js/answer.js"></script>
+  </body>
+</html>
