@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -36,13 +36,11 @@
               <span class="material-icons">menu_book</span>
             </a>
           </div>
-
           <div class="p-section__step js-tab">
             <button class="c-tab js-tab-btn is-active" data-tab="quiz1"><span class="material-icons">live_help</span> 出力予想</button>
             <button class="c-tab js-tab-btn u-ml-8" data-tab="blank1"><span class="material-icons">build</span> コード補完</button>
             <button class="c-tab js-tab-btn u-ml-8" data-tab="task1"><span class="material-icons">edit</span> 提出課題</button>
           </div>
-
           <!-- 出力予想 -->
           <div class="p-section__tab js-tab-content is-active" data-tab-content="quiz1">
             <div class="p-desc">
@@ -68,13 +66,13 @@
                   <div class="p-result u-mb-10 js-quiz-result--11">
                     <span class="js-quiz-message--11 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--11 u-color-normal u-hide">〇 正解！</span>
-                    <span class="js-quiz-incorrect--11 u-color-warning u-hide"
-                      >✕ 不正解。<br />正解は「成人です 処理終了」です。if文の条件が真（true）の場合にブロック内が実行され、その後に続くコードも実行されます。</span
-                    >
+                    <span class="js-quiz-incorrect--11 u-color-warning u-hide">
+                      ✕ 不正解。
+                      <br />正解は「成人です 処理終了」です。if文の条件が真（true）の場合にブロック内が実行され、その後に続くコードも実行されます。
+                    </span>
                   </div>
                   <button data-quiz-id="q1_1" data-step-question-id="11" class="c-btn">答えを確認</button>
                 </div>
-
                 <div class="p-quiz__item js-quizItem">
                   <h4 class="c-title-question">Q2: コンソールに表示される内容として正しいものを選んでください。</h4>
                   <div class="c-code u-mb-16">
@@ -93,9 +91,10 @@
                   <div class="p-result u-mb-10 js-quiz-result--12">
                     <span class="js-quiz-message--12 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--12 u-color-normal u-hide">〇 正解！</span>
-                    <span class="js-quiz-incorrect--12 u-color-warning u-hide"
-                      >✕ 不正解。<br />正解は「終了」です。scoreは50なので、80以上という条件が偽（false）となり、if文のブロック内は実行されません。その後の処理は実行されます。</span
-                    >
+                    <span class="js-quiz-incorrect--12 u-color-warning u-hide">
+                      ✕ 不正解。<br />
+                      正解は「終了」です。scoreは50なので、80以上という条件が偽（false）となり、if文のブロック内は実行されません。その後の処理は実行されます。
+                    </span>
                   </div>
                   <button data-quiz-id="q1_2" data-step-question-id="12" class="c-btn">答えを確認</button>
                 </div>
@@ -125,7 +124,6 @@
                 </div>
                 <button data-blank-id="11" class="c-btn">答えを確認</button>
               </div>
-
               <div class="p-blank__item js-blankItem">
                 <h4 class="c-title-question">Q2: 点数が60以上の場合に"合格"とコンソールに表示するコードの空欄を埋めてください。</h4>
                 <div class="c-code -blank">
@@ -152,7 +150,6 @@
             <div class="p-desc">
               <p class="c-text">提出課題です。curriculum.jsファイルに実装してください。</p>
             </div>
-
             <div class="p-practice js-stepOne">
               <h2 class="c-title-lesson">通知バナーの表示制御</h2>
               <div class="p-practice__inner">
@@ -162,7 +159,6 @@
                 </div>
               </div>
             </div>
-
             <div class="p-task">
               <div class="p-task__item">
                 <span class="c-tag js-tooltip" data-tooltip="問題番号をコピー" data-copy>L4-S1-1</span>
@@ -263,10 +259,12 @@
                 <div class="c-code -blank">
                   const num = 10;<br />
                   if (num % 2
-                  <label for="blank-21" class="c-label-input">Operator</label><input type="text" class="c-input js-blank--5" id="blank-21" placeholder="①" /> 0) {<br />
+                  <label for="blank-21" class="c-label-input">Operator</label>
+                  <input type="text" class="c-input js-blank--5" id="blank-21" placeholder="①" /> 0) {<br />
                   &nbsp;&nbsp;console.log("偶数");<br />
                   }
-                  <label for="blank-22" class="c-label-input">Keyword</label><input type="text" class="c-input js-blank--6" id="blank-22" placeholder="②" /> {<br />
+                  <label for="blank-22" class="c-label-input">Keyword</label>
+                  <input type="text" class="c-input js-blank--6" id="blank-22" placeholder="②" /> {<br />
                   &nbsp;&nbsp;console.log("奇数");<br />
                   }
                 </div>
@@ -282,9 +280,9 @@
                 <div class="c-code -blank">
                   const age = 16;<br />
                   if (age >= 18) {<br />
-                  &nbsp;&nbsp;console.log(<label for="blank-23" class="c-label-input">String</label><input type="text" class="c-input js-blank--7" id="blank-23" placeholder="①" />);<br />
+                  &nbsp;&nbsp;console.log(<label for="blank-23" class="c-label-input">String</label> <input type="text" class="c-input js-blank--7" id="blank-23" placeholder="①" />);<br />
                   } else {<br />
-                  &nbsp;&nbsp;console.log(<label for="blank-24" class="c-label-input">String</label><input type="text" class="c-input js-blank--8" id="blank-24" placeholder="②" />);<br />
+                  &nbsp;&nbsp;console.log(<label for="blank-24" class="c-label-input">String</label> <input type="text" class="c-input js-blank--8" id="blank-24" placeholder="②" />);<br />
                   }
                 </div>
                 <div class="p-result u-mb-10 js-blank-result--22">
@@ -424,8 +422,10 @@
                   if (score >= 80) {<br />
                   &nbsp;&nbsp;console.log("優");<br />
                   }
-                  <label for="blank-31" class="c-label-input">Keyword</label><input type="text" class="c-input js-blank--9" id="blank-31" placeholder="①" />
-                  <label for="blank-32" class="c-label-input">Keyword</label><input type="text" class="c-input js-blank--10" id="blank-32" placeholder="②" /> (score >= 60) {<br />
+                  <label for="blank-31" class="c-label-input">Keyword</label>
+                  <input type="text" class="c-input js-blank--9" id="blank-31" placeholder="①" />
+                  <label for="blank-32" class="c-label-input">Keyword</label>
+                  <input type="text" class="c-input js-blank--10" id="blank-32" placeholder="②" /> (score >= 60) {<br />
                   &nbsp;&nbsp;console.log("良");<br />
                   } else {<br />
                   &nbsp;&nbsp;console.log("不可");<br />
@@ -443,9 +443,9 @@
                 <div class="c-code -blank">
                   const hour = 14;<br />
                   if (hour < 12) {<br />
-                  &nbsp;&nbsp;console.log(<label for="blank-33" class="c-label-input">String</label><input type="text" class="c-input js-blank--11" id="blank-33" placeholder="①" />);<br />
+                  &nbsp;&nbsp;console.log(<label for="blank-33" class="c-label-input">String</label> <input type="text" class="c-input js-blank--11" id="blank-33" placeholder="①" />);<br />
                   } else if (hour < 18) {<br />
-                  &nbsp;&nbsp;console.log(<label for="blank-34" class="c-label-input">String</label><input type="text" class="c-input js-blank--12" id="blank-34" placeholder="②" />);<br />
+                  &nbsp;&nbsp;console.log(<label for="blank-34" class="c-label-input">String</label> <input type="text" class="c-input js-blank--12" id="blank-34" placeholder="②" />);<br />
                   } else {<br />
                   &nbsp;&nbsp;console.log("こんばんは");<br />
                   }
@@ -591,7 +591,8 @@
                   const num1 = 100;<br />
                   const num2 = "100";<br />
                   if (num1
-                  <label for="blank-41" class="c-label-input">Operator</label><input type="text" class="c-input js-blank--13" id="blank-41" placeholder="①" /> num2) {<br />
+                  <label for="blank-41" class="c-label-input">Operator</label>
+                  <input type="text" class="c-input js-blank--13" id="blank-41" placeholder="①" /> num2) {<br />
                   &nbsp;&nbsp;console.log("同じ");<br />
                   } else {<br />
                   &nbsp;&nbsp;console.log("異なる");<br />
@@ -609,8 +610,10 @@
                 <div class="c-code -blank">
                   const age = 25;<br />
                   if (age
-                  <label for="blank-42" class="c-label-input">Operator</label><input type="text" class="c-input js-blank--14" id="blank-42" placeholder="①" /> 20 && age
-                  <label for="blank-43" class="c-label-input">Operator</label><input type="text" class="c-input js-blank--15" id="blank-43" placeholder="②" /> 30) {<br />
+                  <label for="blank-42" class="c-label-input">Operator</label>
+                  <input type="text" class="c-input js-blank--14" id="blank-42" placeholder="①" /> 20 && age
+                  <label for="blank-43" class="c-label-input">Operator</label>
+                  <input type="text" class="c-input js-blank--15" id="blank-43" placeholder="②" /> 30) {<br />
                   &nbsp;&nbsp;console.log("20代");<br />
                   }
                 </div>
@@ -765,7 +768,8 @@
                   const username = "user";<br />
                   const password = "pass";<br />
                   if (username === "user"
-                  <label for="blank-51" class="c-label-input">Operator</label><input type="text" class="c-input js-blank--16" id="blank-51" placeholder="①" /> password === "pass") {<br />
+                  <label for="blank-51" class="c-label-input">Operator</label>
+                  <input type="text" class="c-input js-blank--16" id="blank-51" placeholder="①" /> password === "pass") {<br />
                   &nbsp;&nbsp;console.log("ログイン成功");<br />
                   }
                 </div>
@@ -781,7 +785,8 @@
                 <div class="c-code -blank">
                   const day = "土曜日";<br />
                   if (day === "土曜日"
-                  <label for="blank-52" class="c-label-input">Operator</label><input type="text" class="c-input js-blank--17" id="blank-52" placeholder="①" /> day === "日曜日") {<br />
+                  <label for="blank-52" class="c-label-input">Operator</label>
+                  <input type="text" class="c-input js-blank--17" id="blank-52" placeholder="①" /> day === "日曜日") {<br />
                   &nbsp;&nbsp;console.log("週末");<br />
                   }
                 </div>
@@ -947,14 +952,15 @@
                 <h4 class="c-title-question">Q1: switch文の基本構文の空欄を埋めてください。</h4>
                 <div class="c-code -blank">
                   const fruit = "apple";<br />
-                  <label for="blank-61" class="c-label-input">Keyword</label><input type="text" class="c-input js-blank--18" id="blank-61" placeholder="①" />(fruit) {<br />
-                  &nbsp;&nbsp;<label for="blank-62" class="c-label-input">Keyword</label><input type="text" class="c-input js-blank--19" id="blank-62" placeholder="②" /> "apple":<br />
+                  <label for="blank-61" class="c-label-input">Keyword</label>
+                  <input type="text" class="c-input js-blank--18" id="blank-61" placeholder="①" />(fruit) {<br />
+                  &nbsp;&nbsp;<label for="blank-62" class="c-label-input">Keyword</label> <input type="text" class="c-input js-blank--19" id="blank-62" placeholder="②" /> "apple":<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;console.log("りんご");<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;<label for="blank-63" class="c-label-input">Keyword</label><input type="text" class="c-input js-blank--20" id="blank-63" placeholder="③" />;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<label for="blank-63" class="c-label-input">Keyword</label> <input type="text" class="c-input js-blank--20" id="blank-63" placeholder="③" />;<br />
                   &nbsp;&nbsp;case "banana":<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;console.log("バナナ");<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;break;<br />
-                  &nbsp;&nbsp;<label for="blank-64" class="c-label-input">Keyword</label><input type="text" class="c-input js-blank--21" id="blank-64" placeholder="④" />:<br />
+                  &nbsp;&nbsp;<label for="blank-64" class="c-label-input">Keyword</label> <input type="text" class="c-input js-blank--21" id="blank-64" placeholder="④" />:<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;console.log("不明");<br />
                   }
                 </div>
@@ -971,10 +977,12 @@
                   const day = 3;<br />
                   switch (day) {<br />
                   &nbsp;&nbsp;case 1:<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;console.log(<label for="blank-65" class="c-label-input">String</label><input type="text" class="c-input js-blank--22" id="blank-65" placeholder="①" />);<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;console.log(<label for="blank-65" class="c-label-input">String</label>
+                  <input type="text" class="c-input js-blank--22" id="blank-65" placeholder="①" />);<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;break;<br />
                   &nbsp;&nbsp;case 2:<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;console.log(<label for="blank-66" class="c-label-input">String</label><input type="text" class="c-input js-blank--23" id="blank-66" placeholder="②" />);<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;console.log(<label for="blank-66" class="c-label-input">String</label>
+                  <input type="text" class="c-input js-blank--23" id="blank-66" placeholder="②" />);<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;break;<br />
                   &nbsp;&nbsp;default:<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;console.log("その他");<br />
@@ -1125,8 +1133,10 @@
                 <div class="c-code -blank">
                   const num = 10;<br />
                   const result = num % 2 === 0
-                  <label for="blank-71" class="c-label-input">Operator</label><input type="text" class="c-input js-blank--24" id="blank-71" placeholder="①" /> "偶数"
-                  <label for="blank-72" class="c-label-input">Operator</label><input type="text" class="c-input js-blank--25" id="blank-72" placeholder="②" /> "奇数";<br />
+                  <label for="blank-71" class="c-label-input">Operator</label>
+                  <input type="text" class="c-input js-blank--24" id="blank-71" placeholder="①" /> "偶数"
+                  <label for="blank-72" class="c-label-input">Operator</label>
+                  <input type="text" class="c-input js-blank--25" id="blank-72" placeholder="②" /> "奇数";<br />
                   console.log(result);
                 </div>
                 <div class="p-result u-mb-10 js-blank-result--71">
@@ -1141,8 +1151,10 @@
                 <div class="c-code -blank">
                   const isActive = true;<br />
                   const className = isActive ?
-                  <label for="blank-73" class="c-label-input">String</label><input type="text" class="c-input js-blank--26" id="blank-73" placeholder="①" /> :
-                  <label for="blank-74" class="c-label-input">String</label><input type="text" class="c-input js-blank--27" id="blank-74" placeholder="②" />;
+                  <label for="blank-73" class="c-label-input">String</label>
+                  <input type="text" class="c-input js-blank--26" id="blank-73" placeholder="①" /> :
+                  <label for="blank-74" class="c-label-input">String</label>
+                  <input type="text" class="c-input js-blank--27" id="blank-74" placeholder="②" />;
                 </div>
                 <div class="p-result u-mb-10 js-blank-result--72">
                   <span class="js-blank-correct--72 u-color-normal u-hide">〇 正解！</span>
@@ -1157,7 +1169,6 @@
             <div class="p-desc">
               <p class="c-text">提出課題です。curriculum.jsファイルに実装してください。</p>
             </div>
-
             <div class="p-practice js-stepSeven">
               <h2 class="c-title-lesson">UI状態の動的切り替え</h2>
               <div class="p-practice__inner">
@@ -1367,6 +1378,7 @@
     <script src="../common/assets/js/config.js" defer></script>
     <script src="assets/js/script.js" defer></script>
     <script src="assets/js/curriculum.js" defer></script>
-    <script src="assets/js/sample.js" defer></script><!-- 解答例（削除可能） -->
+    <script src="assets/js/sample.js" defer></script>
+    <!-- 解答例（削除可能） -->
   </body>
 </html>

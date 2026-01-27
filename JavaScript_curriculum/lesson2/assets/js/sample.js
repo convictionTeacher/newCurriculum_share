@@ -3,302 +3,257 @@
  */
 // ===================================
 // L2-S1-1:
-// '#title-stepFirst'の単一の要素を取得し、コンソールに表示する。
+// '#q1'要素を取得し、コンソールに表示する。
 // ===================================
 function L2_S1_1() {
-  const element = document.querySelector('#title-stepFirst');
-  console.log(element);
+  const parent = document.querySelector("#q1");
+  console.log(parent);
 }
-
+L2_S1_1();
 // ===================================
 // L2-S1-2:
-// '.js-item-stepFirst'の要素をNodeListとして取得し、コンソールに表示する。
+// '#q1'要素の中の'.js-item-s1'要素を取得し、コンソールに表示する。
 // ===================================
 function L2_S1_2() {
-  const elements = document.querySelectorAll('.js-item-stepFirst');
-  console.log(elements);
+  const q1 = document.querySelector("#q1");
+  const elem = q1.querySelector(".js-item-s1");
+  console.log(elem);
 }
-
+L2_S1_2();
 // ===================================
 // L2-S1-3:
-// '.js-container-stepFirst'の中にある'js-button-stepFirst'をNodeListとしてすべて取得し、コンソールに表示する。
-// ===================================
-function L2_S1_3() {
-  const container = document.querySelector('.js-container-stepFirst');
-  const buttons = container.querySelectorAll('.js-button-stepFirst');
-  console.log(buttons);
-}
+// '.js-container-s1'の中にある'.js-button-s1'をNodeListとしてすべて取得し、コンソールに表示する。
 
-// ===================================
 // L2-S1-4:
 // L2-S1-3で取得した要素のうち2つ目の要素をNodeListのインデックス[]を使って指定し、コンソールに表示する。
 // ===================================
-function L2_S1_4() {
-  const container = document.querySelector('.js-container-stepFirst');
-  const buttons = container.querySelectorAll('.js-button-stepFirst');
+function L2_S1_3_4() {
+  const q1 = document.querySelector("#q1");
+  const container = q1.querySelector(".js-container-s1");
+  const buttons = container.querySelectorAll(".js-button-s1");
+  console.log(buttons);
   console.log(buttons[1]);
 }
-
+L2_S1_3_4();
 // ===================================
 // L2-S2-1:
-// '.js-header-stepSecond'要素を取得し、要素のテキストを"明日の予定"という文字列に変更する。
+// '.js-header-s2'要素を取得し、要素のテキストを"明日の予定"という文字列に変更する。
 // ===================================
 function L2_S2_1() {
-  const header = document.querySelector('.js-header-stepSecond');
-  header.textContent = "明日の予定";
+  const q2 = document.querySelector("#q2");
+  const title = q2.querySelector(".js-header-s2");
+  title.textContent = "明日の予定";
 }
-
+L2_S2_1();
 // ===================================
 // L2-S2-2:
-// '.js-status-stepSecond'要素を取得し、既存のテキストの末尾に"準備完了"という文字列を追加する。
+// '.js-status-s2'要素を取得し、既存のテキストの末尾に"準備完了"という文字列を追加する。
 // ===================================
 function L2_S2_2() {
-  const status = document.querySelector('.js-status-stepSecond');
+  const q2 = document.querySelector("#q2");
+  const status = q2.querySelector(".js-status-s2");
   status.textContent += "準備完了";
 }
-
+L2_S2_2();
 // ===================================
 // L2-S3-1:
-// '.js-submitBtn-old-stepThird'の要素を取得し、class属性の値を"js-submitBtn-stepThird"に変更する。
+// '.js-submitBtn-old-s3'要素を取得し、class属性の値を"c-button-practice js-submitBtn-s3"に変更する。
 // ===================================
 function L2_S3_1() {
-  const button = document.querySelector('.js-submitBtn-old-stepThird');
-  button.setAttribute('class', 'js-submitBtn-stepThird');
+  const q3 = document.querySelector("#q3");
+  const button = q3.querySelector(".js-submitBtn-old-s3");
+  button.setAttribute("class", "c-button-practice js-submitBtn-s3");
 }
-
+L2_S3_1();
 // ===================================
 // L2-S3-2:
-// '.js-cancelBtn-stepThird'要素を取得し、disabled属性を追加して無効化する。
+// '.js-cancelBtn-s3'要素を取得し、disabled属性を追加して無効化する。
 // ===================================
 function L2_S3_2() {
-  const button = document.querySelector('.js-cancelBtn-stepThird');
-  button.setAttribute('disabled', true);
+  const q3 = document.querySelector("#q3");
+  const button = q3.querySelector(".js-cancelBtn-s3");
+  button.setAttribute("disabled", true);
 }
-
+L2_S3_2();
 // ===================================
 // L2-S4-1:
-// '.js-loginForm-stepFour'要素を取得して'.is-hidden'を削除しフォームを表示する。
+// '.js-loginForm-s4'要素を取得して'.is-hidden'を削除しフォームを表示する。
 // ===================================
 function L2_S4_1() {
-  const form = document.querySelector('.js-loginForm-stepFour');
-  form.classList.remove('is-hidden');
+  const q4 = document.querySelector("#q4");
+  const form = q4.querySelector(".js-loginForm-s4");
+  form.classList.remove("is-hidden");
 }
-
+L2_S4_1();
 // ===================================
 // L2-S4-2:
-// '.js-loginForm-stepFour'要素の中の'.js-loginBtn-stepFour'要素を取得して、'.is-active'を追加し色を変更する。
+// '.js-loginForm-s4'要素の中の'.js-loginBtn-s4'要素を取得して、'.is-active'を追加し色を変更する。
 // ===================================
 function L2_S4_2() {
-  const form = document.querySelector('.js-loginForm-stepFour');
-  const button = form.querySelector('.js-loginBtn-stepFour');
-  button.classList.add('is-active');
+  const q4 = document.querySelector("#q4");
+  const form = q4.querySelector(".js-loginForm-s4");
+  const button = form.querySelector(".js-loginBtn-s4");
+  button.classList.add("is-active");
 }
-
+L2_S4_2();
 // ===================================
 // L2-S5-1:
 // 新しいタスク"メール返信"を作成し、末尾に追加する。スタイルは既存のタスクと統一する。
 // ===================================
 function L2_S5_1() {
-  const taskList = document.querySelector('.js-taskForm-stepFive');
-  const newTask = document.createElement('li');
-  newTask.classList.add('p-practice__card');
+  const q5 = document.querySelector("#q5");
+  const taskList = q5.querySelector(".js-taskForm-s5");
+  const newTask = document.createElement("li");
+  newTask.classList.add("p-practice__card");
   newTask.textContent = "メール返信";
-  taskList.appendChild(newTask);
+  taskList.append(newTask);
 }
-
+L2_S5_1();
 // ===================================
 // L2-S5-2:
-// '.js-taskForm-stepFive'内のすべてのli要素を取得し、インデックスを使って削除する。
+// '.js-taskForm-s5'内のすべてのli要素を取得する。
+// 取得したli要素のうち打ち合わせタスクのみをインデックスを使って削除する。
 // ===================================
 function L2_S5_2() {
-  const taskList = document.querySelector('.js-taskForm-stepFive');
-  const tasks = taskList.querySelectorAll('li');
-  tasks[0].remove();
+  const q5 = document.querySelector("#q5");
+  const taskList = q5.querySelector(".js-taskForm-s5");
+  const tasks = taskList.querySelectorAll("li");
+  tasks[1].remove();
 }
-
+L2_S5_2();
 // ===================================
 // L2-S6-1:
-// メールアドレス欄の値を取得してコンソールに出力し、その後入力欄を空にする。
+// 'js-email-s6'要素の値を取得してコンソールに出力し、その後入力欄を空にする。
 // ===================================
 function L2_S6_1() {
-  const emailInput = document.querySelector('.js-email-stepSix');
+  const q6 = document.querySelector("#q6");
+  const emailInput = q6.querySelector(".js-email-s6");
   console.log(emailInput.value);
-  emailInput.value = '';
+  emailInput.value = "";
 }
-
+L2_S6_1();
 // ===================================
 // L2-S6-2:
-// 同意チェックボックスを初期状態でチェック済みにし、チェック状態をコンソールに出力する。
+// 'js-agree-s6'要素を初期状態でチェック済みにし、チェック状態をコンソールに出力する。
 // ===================================
 function L2_S6_2() {
-  const checkbox = document.querySelector('.js-agree-stepSix');
+  const q6 = document.querySelector("#q6");
+  const checkbox = q6.querySelector(".js-agree-s6");
   checkbox.checked = true;
   console.log(checkbox.checked);
 }
-
+L2_S6_2();
 // ===================================
 // L2-S7-1:
-// '.js-target-stepSeven'要素の親要素の、最初の子要素のテキストをコンソールに表示する。
+// '.js-target-s7'要素の親要素の、最初の子要素のテキストをコンソールに表示する。
 // ===================================
 function L2_S7_1() {
-  const target = document.querySelector('.js-target-stepSeven');
+  const q7 = document.querySelector("#q7");
+  const target = q7.querySelector(".js-target-s7");
   const parent = target.parentElement;
   const firstChild = parent.firstElementChild;
   console.log(firstChild.textContent);
 }
-
+L2_S7_1();
 // ===================================
 // L2-S7-2:
-// '.js-target-stepSeven'要素の、次の兄弟要素のテキストを「ニュース」へ変更する。
+// '.js-target-s7'要素の、次の兄弟要素のテキストを「ニュース」へ変更する。
 // ===================================
 function L2_S7_2() {
-  const target = document.querySelector('.js-target-stepSeven');
+  const q7 = document.querySelector("#q7");
+  const target = q7.querySelector(".js-target-s7");
   const nextSibling = target.nextElementSibling;
   nextSibling.textContent = "ニュース";
 }
-
+L2_S7_2();
 // ===================================
 // L2-S8-1:
 // '.js-user'のdata-user-idの値を取得し、コンソールに表示する。
+
+// L2-S8-2:
+// L2-S8-1で取得したdata-user-idの値と同一のid属性の値を持つ要素を取得し、data-nameを"田中茉莉"へ変更する。
 // ===================================
-function L2_S8_1() {
-  const user = document.querySelector('.js-user');
+function L2_S8_1_2() {
+  const q8 = document.querySelector("#q8");
+  const user = q8.querySelector(".js-user-s8");
   const userId = user.dataset.userId;
   console.log(userId);
-}
-
-// ===================================
-// L2-S8-2:
-// L2-S8-1で取得したdata-user-idの値をid属性の値で持つ要素を取得し、data-nameを"田中茉莉"へ変更する。
-// ===================================
-function L2_S8_2() {
-  const user = document.querySelector('.js-user');
-  const userId = user.dataset.userId;
   const targetElement = document.querySelector(`#${userId}`);
   targetElement.dataset.name = "田中茉莉";
 }
-
+L2_S8_1_2();
 // ===================================
 // L2-S9-1:
-// '.p-practice__card'をもつli要素を2つ作成し、それぞれDocumentFragmentに追加してから'.js-template-stepNine'にまとめて追加する。
-// 追加するli要素のテキストは"HOME"と"ABOUT"。
-// ===================================
-function L2_S9_1() {
-  const fragment = document.createDocumentFragment();
-  const li1 = document.createElement('li');
-  li1.classList.add('p-practice__card');
-  li1.textContent = "HOME";
-  const li2 = document.createElement('li');
-  li2.classList.add('p-practice__card');
-  li2.textContent = "ABOUT";
-  fragment.appendChild(li1);
-  fragment.appendChild(li2);
-  const template = document.querySelector('.js-template-stepNine');
-  template.appendChild(fragment);
-}
+// 新しくDocumentFragmentを作成し、'.p-practice__card'をもつli要素を1つ作成する。（テキストは"HOME"）
+// 作成したli要素をDocumentFragmentに追加する。
 
-// ===================================
 // L2-S9-2:
-// '.js-template-stepNine'の中身を複製して、DocumentFragment経由で'.js-navlist-stepNine'配下にまとめて追加する。
-// ===================================
-function L2_S9_2() {
-  const template = document.querySelector('.js-template-stepNine');
-  const clone = template.cloneNode(true);
-  const fragment = document.createDocumentFragment();
-  fragment.appendChild(clone);
-  const navlist = document.querySelector('.js-navlist-stepNine');
-  navlist.appendChild(fragment);
-}
+// L2-S9-1で作成したDocumentFragmentを、'.js-template-s9'要素の中身（content）に追加する。
 
+// L2-S9-3:
+// '.js-template-s9'要素の中身を複製し、'.js-navList-s9'要素の配下に追加する。
+// ===================================
+function L2_S9_1_2_3() {
+  const q9 = document.querySelector("#q9");
+  const fragment = document.createDocumentFragment();
+  const homeElement = document.createElement("li");
+  homeElement.classList.add("p-practice__card");
+  homeElement.textContent = "HOME";
+  fragment.append(homeElement);
+  const template = document.querySelector(".js-template-s9");
+  template.content.append(fragment);
+  const clone = template.content.cloneNode(true);
+  const navList = q9.querySelector(".js-navList-s9");
+  navList.append(clone);
+}
+L2_S9_1_2_3();
 // ===================================
 // L2-S10-1:
-// '.js-name-stepTen'要素の名前を"田中祐美"、'.js-status-stepTen'要素をstrongタグに、ステータスを承認済みへ変更する。
-// 親要素のdata-role属性の値を"member"へ変更し、'.is-active'を追加する。
+// ① '.js-name-step10'要素のテキストを"田中祐美"に変更する。
+// ② '.js-status-step10'要素のテキストを承認済みへ変更する。
+// ③ ②で変更した'.js-status-step10'要素の親要素のdata-role属性値を"member"へ変更し、'.is-active'を追加する。
 // ===================================
 function L2_S10_1() {
-  const nameElement = document.querySelector('.js-name-stepTen');
+  const q10_1 = document.querySelector("#q10_1");
+  const nameElement = q10_1.querySelector(".js-name-step10");
   nameElement.textContent = "田中祐美";
-  const statusElement = document.querySelector('.js-status-stepTen');
-  const strong = document.createElement('strong');
-  strong.textContent = "承認済み";
-  statusElement.parentElement.replaceChild(strong, statusElement);
-  const parent = nameElement.closest('.p-practice__card');
+  const statusElement = q10_1.querySelector(".js-status-step10");
+  statusElement.textContent = "承認済み";
+  const parent = nameElement.closest(".p-practice__card"); // const parent = statusElement.parentElement;でも可
   parent.dataset.role = "member";
-  parent.classList.add('is-active');
+  parent.classList.add("is-active");
 }
-
+L2_S10_1();
 // ===================================
 // L2-S10-2:
-// 初期状態でdata-iconの値がjavascriptの要素をチェック状態にする。
-// '.js-container-stepTen'の子要素のうち直接、チェック状態の要素を取得する。
-// その要素のテキストを'.js-result-stepTen'要素のテキストに表示する処理を追加する。
-// '.js-icon-stepTen'要素のテキストには、そのチェック状態の要素のdata-iconの値を設定する。
+// ① '.js-link-step10'要素のhref属性の値を"https://www.google.com/"に変更する。
+// ② 属性にtarget="_blank"を追加し別タブで開くように設定する。
+// ③ '.-disabled'を削除しボタンを有効化する。
+// ④ '.js-link-step10'要素から最も近い親要素'.p-practice__card'要素を取得し、その親要素内の最後の子要素を削除する。
 // ===================================
 function L2_S10_2() {
-  const jsInput = document.querySelector('[data-icon="javascript"]');
-  jsInput.checked = true;
-  const container = document.querySelector('.js-container-stepTen');
-  const checkedInput = container.querySelector('input:checked');
-  const label = checkedInput.nextElementSibling;
-  const result = document.querySelector('.js-result-stepTen');
-  result.textContent = label.textContent;
-  const icon = document.querySelector('.js-icon-stepTen');
-  icon.textContent = checkedInput.dataset.icon;
-}
-
-// ===================================
-// L2-S10-3:
-// '.js-cardContainer-stepTen'の最初の子要素を削除する。
-// 新しいdiv要素を作成し、'.js-cardContainer-stepTen'の最初の子要素として追加する。
-// その要素に'.p-practice__card'を付与、テキストに「プランA」を設定する。
-// '.js-cardContainer-stepTen'の最後の子要素に'.js-change'を追加する。
-// '.js-change'要素のテキストを「プランB」へ変更する。
-// ===================================
-function L2_S10_3() {
-  const container = document.querySelector('.js-cardContainer-stepTen');
-  container.firstElementChild.remove();
-  const newDiv = document.createElement('div');
-  newDiv.classList.add('p-practice__card');
-  newDiv.textContent = "プランA";
-  container.insertBefore(newDiv, container.firstElementChild);
-  container.lastElementChild.classList.add('js-change');
-  const changeElement = document.querySelector('.js-change');
-  changeElement.textContent = "プランB";
-}
-
-// ===================================
-// L2-S10-4:
-// '.js-link-stepTen'要素のhref属性の値を"https://example.com"とし、target="_blank"を追加し、'.-disabled'を削除する。
-// '.js-link-stepTen'要素から一番近い親要素'.p-practice__card'要素を取得する。
-// その要素の最後の子要素を削除する。
-// ===================================
-function L2_S10_4() {
-  const link = document.querySelector('.js-link-stepTen');
-  link.setAttribute('href', 'https://example.com');
-  link.setAttribute('target', '_blank');
-  link.classList.remove('-disabled');
-  const card = link.closest('.p-practice__card');
+  const q10_2 = document.querySelector("#q10_2");
+  const link = q10_2.querySelector(".js-link-step10");
+  link.setAttribute("href", "https://www.google.com/");
+  link.setAttribute("target", "_blank");
+  link.classList.remove("-disabled");
+  const card = link.closest(".p-practice__card");
   card.lastElementChild.remove();
 }
-
+L2_S10_2();
 // ===================================
-// L2-S10-5:
-// templateタグ要素を取得し、子要素も含めて中身を完全に複製する。
-// 複製した要素の'.js-notifyTitle-ten'要素のテキストを「システム更新」に変更する。
-// '.js-notifyMsg-ten'要素のテキストを「メンテナンス完了しました」に変更する。
-// '.js-notifyTime-ten'要素のテキストを、今日の日付を取得するメソッドを使って、本日の日付に変更する。
-// '.js-notifyContainer-ten'要素を取得し、最後の子要素として追加する。
+// L2-S10-3:
+// ① 初期表示時に、data-icon="javascript"を持つラジオボタンを選択状態にする。
+// ② '.js-container-step10'の子要素から、現在チェックされている入力要素を取得する。
+// ③ その選択された要素のテキストを'.js-result-step10'要素に表示する。
 // ===================================
-function L2_S10_5() {
-  const template = document.querySelector('template');
-  const clone = template.content.cloneNode(true);
-  const title = clone.querySelector('.js-notifyTitle-ten');
-  title.textContent = "システム更新";
-  const msg = clone.querySelector('.js-notifyMsg-ten');
-  msg.textContent = "メンテナンス完了しました";
-  const time = clone.querySelector('.js-notifyTime-ten');
-  const today = new Date();
-  time.textContent = `${today.getFullYear()}/${today.getMonth() + 1}/${today.getDate()}`;
-  const container = document.querySelector('.js-notifyContainer-ten');
-  container.appendChild(clone);
+function L2_S10_3() {
+  const q10_3 = document.querySelector("#q10_3");
+  const jsInput = q10_3.querySelector('[data-icon="javascript"]');
+  jsInput.checked = true;
+  const container = q10_3.querySelector(".js-container-step10");
+  const checkedInput = container.querySelector("input:checked");
+  const result = q10_3.querySelector(".js-result-step10");
+  result.textContent = checkedInput.value;
 }
+L2_S10_3();
