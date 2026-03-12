@@ -46,6 +46,6 @@ window.BLANK_ANSWERS = {
   51: { inputs: [".js-blank--11"], answers: ["stopPropagation"], validation: "single" },
   52: { inputs: [".js-blank--24"], answers: ["currentTarget"], validation: "single" },
   61: { inputs: [".js-blank--12", ".js-blank--13"], answers: ["contextmenu", "preventDefault"], validation: "default" },
-  81: { inputs: [".js-blank--17", ".js-blank--18"], answers: [".js-taskList", "addEventListener"], validation: "default" },
-  82: { inputs: [".js-blank--28", ".js-blank--29"], answers: [".js-productList", "addEventListener"], validation: "default" },
+  81: { inputs: [".js-blank--17", ".js-blank--18"], answers: ["textContent", "target"], validation: "default" },
+  82: { inputs: [".js-blank--28", ".js-blank--29"], answers: ["classList", "add"], validation: "default" },
 };

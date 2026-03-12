@@ -289,6 +289,10 @@ JavaScript Curriculum Common StyleCSS
   text-decoration: underline;
 }
 
+.c-text.-bold {
+  font-weight: 700;
+}
+
 .c-code {
   font-family: var(--font-family-mono);
   background: var(--color-gray-2);
@@ -384,7 +388,7 @@ JavaScript Curriculum Common StyleCSS
   color: var(--color-gray-30);
   border: none;
   padding: 8px 20px;
-  min-width: 80px;
+  min-width: 180px;
   border-radius: 4px;
   font-size: var(--size-sm-alt);
   cursor: pointer;
@@ -426,6 +430,13 @@ JavaScript Curriculum Common StyleCSS
   outline: none;
   border-color: #ab1724;
   box-shadow: 0 0 0 1px var(--color-shadow);
+}
+
+.c-input.-textarea {
+  width: 100%;
+  resize: vertical;
+  font-family: inherit;
+  padding: 8px 12px;
 }
 
 .c-agree {
@@ -613,7 +624,6 @@ JavaScript Curriculum Common StyleCSS
   gap: 12px;
   margin-bottom: 12px;
   padding: 20px;
-  color: var(--color-gray-3);
   background: var(--color-gray-28);
   border-radius: 6px;
   border: 1px solid var(--color-gray-15);
@@ -690,6 +700,18 @@ JavaScript Curriculum Common StyleCSS
   gap: 32px;
 }
 
+.p-practice__inner.-column {
+  flex-direction: column;
+}
+
+.p-practice__inner.-align-start {
+  align-items: start;
+}
+
+.p-practice__inner.-gap-16 {
+  gap: 16px;
+}
+
 .p-practice__card {
   background: var(--color-gray-30);
   border: 1px solid var(--color-border);
@@ -727,6 +749,23 @@ JavaScript Curriculum Common StyleCSS
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
+}
+
+.p-practice__item.-between {
+  justify-content: space-between;
+}
+
+.p-practice__item.-align-end {
+  align-items: end;
+}
+
+.p-practice__item.-nowrap {
+  flex-wrap: nowrap;
+}
+
+.p-practice__item.-gap-16 {
+  gap: 16px;
 }
 
 .p-practice__item label {
@@ -762,7 +801,6 @@ JavaScript Curriculum Common StyleCSS
 }
 
 .p-result {
-  border-radius: 4px;
   font-weight: 500;
   display: none;
 }
@@ -805,6 +843,15 @@ JavaScript Curriculum Common StyleCSS
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.p-colorBox {
+  border: 2px solid var(--color-gray-15);
+  border-radius: 8px;
+  background-color: var(--color-gray-30);
+  transition: all 0.3s ease;
+  width: 200px;
+  min-height: 50px;
 }
 
 /* utility */
@@ -875,4 +922,12 @@ JavaScript Curriculum Common StyleCSS
 
 .u-show {
   display: block;
+}
+
+.u-w-full {
+  width: 100%;
+}
+
+.u-min-w-100 {
+  min-width: 100px;
 }

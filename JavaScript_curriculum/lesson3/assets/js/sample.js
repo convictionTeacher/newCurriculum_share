@@ -3,314 +3,274 @@
  */
 // ===================================
 // L3-S1-1:
-// '.js-click-stepFirst'要素にクリックイベントを追加し、クリック時に'.js-display-stepFirst'要素のテキストを「ボタンがクリックされました」に変更する。
+// '.js-click-s1'要素にクリックイベントを追加する。
+// クリック時に'.js-display-s1'要素のテキストを「ファイルを選択しました。」に変更する。
 // ===================================
 function L3_S1_1() {
-  const button = document.querySelector('.js-click-stepFirst');
-  const display = document.querySelector('.js-display-stepFirst');
-  button.addEventListener('click', function() {
-    display.textContent = "ボタンがクリックされました";
+  const q1 = document.querySelector("#q1");
+  const button = q1.querySelector(".js-click-s1");
+  const display = q1.querySelector(".js-display-s1");
+
+  button.addEventListener("click", function () {
+    display.textContent = "ファイルを選択しました。";
   });
 }
-
+L3_S1_1();
 // ===================================
 // L3-S1-2:
-// '.js-click-stepFirst'要素にダブルクリックイベントを追加し、ダブルクリック時に'.js-display-stepFirst'要素のテキストを「ダブルクリックされました」に変更する。
+// '.js-click-s1'要素にアロー関数を使用し、ダブルクリックイベントを追加する。
+// ダブルクリック時に'.js-display-s1'要素のテキストを「ファイルを開きました。」に変更する。
 // ===================================
 function L3_S1_2() {
-  const button = document.querySelector('.js-click-stepFirst');
-  const display = document.querySelector('.js-display-stepFirst');
-  button.addEventListener('dblclick', function() {
-    display.textContent = "ダブルクリックされました";
+  const q1 = document.querySelector("#q1");
+  const button = q1.querySelector(".js-click-s1");
+  const display = q1.querySelector(".js-display-s1");
+  button.addEventListener("dblclick", () => {
+    display.textContent = "ファイルを開きました。";
   });
 }
-
-// Step2: イベント属性はレガシーコードとなるため、「コード補完」と「提出課題」はありません。
-
+L3_S1_2();
 // ===================================
 // L3-S3-1:
-// '.js-input-stepThird'要素にinputイベントを追加し、入力のたびに'.js-status-stepThird'要素のテキストを「入力中: [入力された値]」の形式で表示する。
+// '.js-input-s3'要素に文字を入力したら、その内容を'.js-message-s3'要素のテキストにリアルタイムで反映する。
 // ===================================
 function L3_S3_1() {
-  const input = document.querySelector('.js-input-stepThird');
-  const status = document.querySelector('.js-status-stepThird');
-  input.addEventListener('input', function() {
-    status.textContent = `入力中: ${input.value}`;
+  const q3 = document.querySelector("#q3");
+  const input = q3.querySelector(".js-input-s3");
+  const message = q3.querySelector(".js-message-s3");
+  input.addEventListener("input", () => {
+    message.textContent = input.value;
   });
 }
-
+L3_S3_1();
 // ===================================
 // L3-S3-2:
-// '.js-hover-stepThird'要素にmouseenterイベントとmouseleaveイベントを追加し、ホバー時に'.js-status-stepThird'要素のテキストを「ホバー中」、離れたときに「ホバー終了」に変更する。
+// '.js-input-s3'要素にマウスをのせたら'.js-status-s3'要素のテキストに「入力中...」、離れたときは「待機中」を表示する。
 // ===================================
 function L3_S3_2() {
-  const hoverElement = document.querySelector('.js-hover-stepThird');
-  const status = document.querySelector('.js-status-stepThird');
-  hoverElement.addEventListener('mouseenter', function() {
-    status.textContent = "ホバー中";
+  const q3 = document.querySelector("#q3");
+  const input = q3.querySelector(".js-input-s3");
+  const status = q3.querySelector(".js-status-s3");
+  input.addEventListener("mouseenter", () => {
+    status.textContent = "入力中...";
   });
-  hoverElement.addEventListener('mouseleave', function() {
-    status.textContent = "ホバー終了";
+  input.addEventListener("mouseleave", () => {
+    status.textContent = "待機中";
   });
 }
-
+L3_S3_2();
 // ===================================
 // L3-S4-1:
-// '.js-event-stepFour'要素にクリックイベントを追加し、クリック時にイベントオブジェクトのtypeプロパティを'.js-info-stepFour'要素に「イベントタイプ: [type]」の形式で表示する。
+// '.js-event-s4'要素をクリック時に発生するイベントオブジェクトを使用し、クリックされたボタンに'.is-active'クラスを付与する。
+// テキストを「電源ON状態」に変更する。（スタイルは実装済み。）
 // ===================================
 function L3_S4_1() {
-  const eventElement = document.querySelector('.js-event-stepFour');
-  const info = document.querySelector('.js-info-stepFour');
-  eventElement.addEventListener('click', function(event) {
-    info.textContent = `イベントタイプ: ${event.type}`;
+  const q4 = document.querySelector("#q4");
+  const eventElement = q4.querySelector(".js-event-s4");
+  eventElement.addEventListener("click", (e) => {
+    const target = e.target;
+    target.classList.add("is-active");
+    target.textContent = "電源ON状態";
   });
 }
-
+L3_S4_1();
 // ===================================
 // L3-S4-2:
-// '.js-key-stepFour'要素にkeydownイベントを追加し、キー押下時にイベントオブジェクトのkeyプロパティを'.js-info-stepFour'要素に「押されたキー: [key]」の形式で表示する。
+// '.js-key-s4'要素でキーボードのキーを押下時に、イベントオブジェクトを使用して押されたキー名を'.js-key-s4'要素自身に表示する。
 // ===================================
 function L3_S4_2() {
-  const keyElement = document.querySelector('.js-key-stepFour');
-  const info = document.querySelector('.js-info-stepFour');
-  keyElement.addEventListener('keydown', function(event) {
-    info.textContent = `押されたキー: ${event.key}`;
+  const q4 = document.querySelector("#q4");
+  const keyElement = q4.querySelector(".js-key-s4");
+  keyElement.addEventListener("keydown", (e) => {
+    keyElement.value = e.key;
   });
 }
-
+L3_S4_2();
 // ===================================
 // L3-S5-1:
-// '.js-outer-stepFive'要素と'.js-inner-stepFive'要素の両方にクリックイベントを追加し、それぞれクリック時に'.js-log-stepFive'要素に「外側クリック」「内側クリック」を追記する。
-// ===================================
-function L3_S5_1() {
-  const outer = document.querySelector('.js-outer-stepFive');
-  const inner = document.querySelector('.js-inner-stepFive');
-  const log = document.querySelector('.js-log-stepFive');
-  outer.addEventListener('click', function() {
-    log.textContent += "外側クリック ";
-  });
-  inner.addEventListener('click', function() {
-    log.textContent += "内側クリック ";
-  });
-}
+// '.js-outer-s5'要素または'.js-inner-s5'要素がクリックされたときに、'.js-log-s5'要素の中にクリックログをpタグとして追加する。
+// '.js-outer-s5'要素をクリックした場合："パネルをクリック"と表示する。
+// .'js-inner-s5'要素をクリックした場合："オプションを選択"と表示する。
 
-// ===================================
 // L3-S5-2:
-// '.js-inner-stepFive'要素のクリックイベントでstopPropagation()を使用し、内側ボタンクリック時に外側のイベントが発火しないように設定する。
+// '.js-inner-s5'要素をクリック時に、外側（パネル側）の処理が実行されないように修正する。
 // ===================================
-function L3_S5_2() {
-  const outer = document.querySelector('.js-outer-stepFive');
-  const inner = document.querySelector('.js-inner-stepFive');
-  const log = document.querySelector('.js-log-stepFive');
-  outer.addEventListener('click', function() {
-    log.textContent += "外側クリック ";
+function L3_S5_1_2() {
+  const q5 = document.querySelector("#q5");
+  const outer = q5.querySelector(".js-outer-s5");
+  const inner = q5.querySelector(".js-inner-s5");
+  const log = q5.querySelector(".js-log-s5");
+  outer.addEventListener("click", () => {
+    const p = document.createElement("p");
+    p.textContent = "パネルをクリック";
+    log.append(p);
   });
-  inner.addEventListener('click', function(event) {
-    event.stopPropagation();
-    log.textContent += "内側クリック ";
+  inner.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const p = document.createElement("p");
+    p.textContent = "オプションを選択 ";
+    log.append(p);
   });
 }
-
+L3_S5_1_2();
 // ===================================
 // L3-S6-1:
-// '.js-form-stepSix'要素を押下(フォーム送信)時にpreventDefault()で送信を止め、'.js-message-stepSix'要素に「送信前チェック中」と表示する。
+// '.js-form-s6'要素を押下(フォーム送信)時にpreventDefault()で送信を止める。
+// その後'.js-message-s6'要素に「送信前チェック中…」と表示する。
+//
+// L3-S6-2:
+// L3-S6-1でフォーム送信を止める。
+// 3秒後に"送信完了"と表示してフォームを送信する。
 // ===================================
-function L3_S6_1() {
-  const form = document.querySelector('.js-form-stepSix');
-  const message = document.querySelector('.js-message-stepSix');
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    message.textContent = "送信前チェック中";
+function L3_S6_1_2() {
+  const q6 = document.querySelector("#q6");
+  const form = q6.querySelector(".js-form-s6");
+  const message = q6.querySelector(".js-message-s6");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    message.textContent = "送信前チェック中…";
+
+    setTimeout(() => {
+      message.textContent = "送信完了";
+      form.submit();
+    }, 3000);
   });
 }
-
-// Step7: イベントリスナーのオプションは概念の理解に重点を置いているため、「コード補完」と「提出課題」はありません。
-
+L3_S6_1_2();
 // ===================================
 // L3-S8-1:
-// '.js-list-stepEight'要素にクリックイベントを委譲で追加し、'.js-item'クラスの要素がクリックされたときに'.js-message-stepEight'要素にそのテキスト内容を表示する。
+// '.js-menu-s8'要素にトグルイベントを委譲で設定する。
+// '.js-item-s8'要素をクリック時にその要素に'.is-active'をトグルして切り替える。
+// （今回はif文での対象判定は不要。）
 // ===================================
 function L3_S8_1() {
-  const list = document.querySelector('.js-list-stepEight');
-  const message = document.querySelector('.js-message-stepEight');
-  list.addEventListener('click', function(event) {
-    if (event.target.classList.contains('js-item')) {
-      message.textContent = event.target.textContent;
-    }
+  const q8 = document.querySelector("#q8");
+  const list = q8.querySelector(".js-menu-s8");
+  list.addEventListener("click", (e) => {
+    e.target.classList.toggle("is-active");
   });
 }
-
+L3_S8_1();
 // ===================================
 // L3-S8-2:
-// '.js-add-stepEight'要素にクリックイベントを追加し、クリック時に'.js-list-stepEight'要素に新しいli要素('.js-item'クラス付き)を追加する。
-// テキストは「新しい項目」。
+// '.js-add-s8'要素にクリックイベントを委譲で設定する。
+// その要素をクリック時に'.js-menu-s8'要素の中に'.js-newItem-s8'を持つ新しいli要素"ジュース"を追加する。
+// デザインは他のカードと統一する。
 // ===================================
 function L3_S8_2() {
-  const addButton = document.querySelector('.js-add-stepEight');
-  const list = document.querySelector('.js-list-stepEight');
-  addButton.addEventListener('click', function() {
-    const newItem = document.createElement('li');
-    newItem.classList.add('js-item');
-    newItem.textContent = "新しい項目";
-    list.appendChild(newItem);
+  const q8 = document.querySelector("#q8");
+  const addButton = q8.querySelector(".js-add-s8");
+  const list = q8.querySelector(".js-menu-s8");
+  addButton.addEventListener("click", () => {
+    const newItem = document.createElement("li");
+    newItem.classList.add("p-practice__card", "js-itemThird");
+    newItem.textContent = "ジュース";
+    list.append(newItem);
   });
 }
-
+L3_S8_2();
 // ===================================
 // L3-S9-1:
-// '.js-name-input'要素(input)に名前を入力、'.js-age-input'要素(input)に年齢を入力、'.js-register-btn'要素をクリックすると、入力内容を'.js-user-info'要素に「名前: [名前], 年齢: [年齢]歳」の形式で表示する。
+// ①.js-nameInput-s9要素に名前、.js-ageInput-s9要素に年齢を入力し.js-register-s9要素をクリックする。
+// ②入力内容を.js-userResult-s9要素に「名前: "入力した名前", 年齢:"入力した年齢"歳」の形式で表示する。
 // ===================================
 function L3_S9_1() {
-  const nameInput = document.querySelector('.js-name-input');
-  const ageInput = document.querySelector('.js-age-input');
-  const registerBtn = document.querySelector('.js-register-btn');
-  const userInfo = document.querySelector('.js-user-info');
-  registerBtn.addEventListener('click', function() {
+  const q9_1 = document.querySelector("#q9_1");
+  const nameInput = q9_1.querySelector(".js-nameInput-s9");
+  const ageInput = q9_1.querySelector(".js-ageInput-s9");
+  const registerBtn = q9_1.querySelector(".js-register-s9");
+  const userInfo = q9_1.querySelector(".js-userResult-s9");
+  registerBtn.addEventListener("click", () => {
     userInfo.textContent = `名前: ${nameInput.value}, 年齢: ${ageInput.value}歳`;
   });
 }
-
+L3_S9_1();
 // ===================================
 // L3-S9-2:
-// '.js-todo-input'要素(input)にタスクを入力、'.js-add-todo-btn'要素をクリックで新しいli要素(クラス名: p-practice__cardとjs-item)を'.js-todo-list'要素に追加する。
-// 追加した各li要素には削除ボタン('.js-delete-btn'クラス、テキスト「削除」)を付ける。
-// 削除ボタンをクリックでその親要素のli要素を削除する。
-// '.js-todo-count'要素にタスク数を「タスク数: [数]個」の形式で常に表示する。
+// ①.js-numLeft-s9、.js-numRight-s9要素に数値を入力する。
+// ②.js-addBtn-s9、.js-subtractBtn-s9、.js-multiplyBtn-s9、.js-divideBtn-s9要素をクリックで各計算を実行する。
+// ③結果を.js-calcResult-s9要素に「結果:[計算結果]」の形式で表示する。
 // ===================================
 function L3_S9_2() {
-  const todoInput = document.querySelector('.js-todo-input');
-  const addTodoBtn = document.querySelector('.js-add-todo-btn');
-  const todoList = document.querySelector('.js-todo-list');
-  const todoCount = document.querySelector('.js-todo-count');
+  const q9_2 = document.querySelector("#q9_2");
+  const numLeftInput = q9_2.querySelector(".js-numLeft-s9");
+  const numRightInput = q9_2.querySelector(".js-numRight-s9");
+  const addBtn = q9_2.querySelector(".js-addBtn-s9");
+  const subtractBtn = q9_2.querySelector(".js-subtractBtn-s9");
+  const multiplyBtn = q9_2.querySelector(".js-multiplyBtn-s9");
+  const divideBtn = q9_2.querySelector(".js-divideBtn-s9");
+  const calcResult = q9_2.querySelector(".js-calcResult-s9");
 
-  function updateCount() {
-    const count = todoList.querySelectorAll('li').length;
-    todoCount.textContent = `タスク数: ${count}個`;
-  }
+  addBtn.addEventListener("click", () => {
+    const result = Number(numLeftInput.value) + Number(numRightInput.value);
+    calcResult.textContent = `${result}`;
+  });
 
-  addTodoBtn.addEventListener('click', function() {
-    const newTask = document.createElement('li');
-    newTask.classList.add('p-practice__card', 'js-item');
-    newTask.textContent = todoInput.value;
+  subtractBtn.addEventListener("click", () => {
+    const result = Number(numLeftInput.value) - Number(numRightInput.value);
+    calcResult.textContent = `${result}`;
+  });
 
-    const deleteBtn = document.createElement('button');
-    deleteBtn.classList.add('js-delete-btn');
-    deleteBtn.textContent = "削除";
-    deleteBtn.addEventListener('click', function() {
-      newTask.remove();
-      updateCount();
-    });
+  multiplyBtn.addEventListener("click", () => {
+    const result = Number(numLeftInput.value) * Number(numRightInput.value);
+    calcResult.textContent = `${result}`;
+  });
 
-    newTask.appendChild(deleteBtn);
-    todoList.appendChild(newTask);
-    todoInput.value = '';
-    updateCount();
+  divideBtn.addEventListener("click", () => {
+    const result = Number(numLeftInput.value) / Number(numRightInput.value);
+    calcResult.textContent = `${result}`;
   });
 }
-
+L3_S9_2();
 // ===================================
 // L3-S9-3:
-// '.js-num1-input'、'.js-num2-input'要素(input type="number")に数値を入力する。
-// '.js-add-btn'、'.js-subtract-btn'、'.js-multiply-btn'、'.js-divide-btn'要素をクリックで各計算を実行する。
-// 結果を'.js-calc-result'要素に「結果: [計算結果]」の形式で表示する。
+// ①.js-colorInput-s9の値が変更されたとき、.js-targetBox-s9の背景色をインラインスタイルを使用して選択した色に変更する。
+// ②背景色を変更したとき、.js-currentColor-s9に現在の色のHEXコードを表示する。
+// ③.js-resetBtn-s9をクリックしたとき、背景色を初期状態（#ffffff）に戻す。
+// ④リセット時は.js-colorInput-s9 の値、.js-targetBox-s9の背景色、.js-currentColor-s9の表示をすべて初期状態にする。
 // ===================================
 function L3_S9_3() {
-  const num1Input = document.querySelector('.js-num1-input');
-  const num2Input = document.querySelector('.js-num2-input');
-  const addBtn = document.querySelector('.js-add-btn');
-  const subtractBtn = document.querySelector('.js-subtract-btn');
-  const multiplyBtn = document.querySelector('.js-multiply-btn');
-  const divideBtn = document.querySelector('.js-divide-btn');
-  const calcResult = document.querySelector('.js-calc-result');
+  const q9_3 = document.querySelector("#q9_3");
+  const colorInput = q9_3.querySelector(".js-colorInput-s9");
+  const targetBox = q9_3.querySelector(".js-targetBox-s9");
+  const resetBtn = q9_3.querySelector(".js-resetBtn-s9");
+  const currentColor = q9_3.querySelector(".js-currentColor-s9");
 
-  addBtn.addEventListener('click', function() {
-    const result = Number(num1Input.value) + Number(num2Input.value);
-    calcResult.textContent = `結果: ${result}`;
+  const defaultColor = colorInput.value;
+  currentColor.textContent = `${defaultColor}`;
+
+  colorInput.addEventListener("input", () => {
+    const color = colorInput.value;
+    targetBox.style.backgroundColor = color;
+    currentColor.textContent = `${color}`;
   });
 
-  subtractBtn.addEventListener('click', function() {
-    const result = Number(num1Input.value) - Number(num2Input.value);
-    calcResult.textContent = `結果: ${result}`;
-  });
-
-  multiplyBtn.addEventListener('click', function() {
-    const result = Number(num1Input.value) * Number(num2Input.value);
-    calcResult.textContent = `結果: ${result}`;
-  });
-
-  divideBtn.addEventListener('click', function() {
-    const result = Number(num1Input.value) / Number(num2Input.value);
-    calcResult.textContent = `結果: ${result}`;
+  resetBtn.addEventListener("click", () => {
+    colorInput.value = defaultColor;
+    targetBox.style.backgroundColor = defaultColor;
+    currentColor.textContent = `${defaultColor}`;
   });
 }
-
+L3_S9_3();
 // ===================================
 // L3-S9-4:
-// '.js-color-input'要素(input type="color")で色を選択したときに、'.js-target-box'要素の背景色を選択した色に変更する。
-// '.js-reset-btn'要素をクリックで背景色を初期状態(#ffffff)に戻す。
-// '.js-current-color'要素に現在の色のHEXコードを「現在の色: [HEXコード]」の形式で表示する。
+// ①.js-textInput-s9要素にテキストを入力のたびに.js-charCount-s9要素に"文字数"を表示する。
+// ③.js-clearBtn-s9要素をクリックでテキストエリアを空にし、.js-char-count要素を"0"に更新する。
 // ===================================
 function L3_S9_4() {
-  const colorInput = document.querySelector('.js-color-input');
-  const targetBox = document.querySelector('.js-target-box');
-  const resetBtn = document.querySelector('.js-reset-btn');
-  const currentColor = document.querySelector('.js-current-color');
+  const root = document.querySelector("#q9_4");
+  const textInput = root.querySelector(".js-textInput-s9");
+  const charCount = root.querySelector(".js-charCount-s9");
+  const clearBtn = root.querySelector(".js-clearBtn-s9");
 
-  colorInput.addEventListener('input', function() {
-    targetBox.style.backgroundColor = colorInput.value;
-    currentColor.textContent = `現在の色: ${colorInput.value}`;
+  textInput.addEventListener("input", () => {
+    charCount.textContent = `${textInput.value.length}`;
   });
 
-  resetBtn.addEventListener('click', function() {
-    targetBox.style.backgroundColor = '#ffffff';
-    colorInput.value = '#ffffff';
-    currentColor.textContent = `現在の色: #ffffff`;
+  clearBtn.addEventListener("click", () => {
+    textInput.value = "";
+    charCount.textContent = "0";
   });
 }
-
-// ===================================
-// L3-S9-5:
-// '.js-text-input'要素(textarea)にテキストを入力、inputイベントで入力のたびに'.js-char-count'要素に「文字数: [文字数]」を表示する。
-// '.js-clear-btn'要素をクリックでテキストエリアを空にし、'.js-char-count'要素を「文字数: 0」に更新する。
-// ===================================
-function L3_S9_5() {
-  const textInput = document.querySelector('.js-text-input');
-  const charCount = document.querySelector('.js-char-count');
-  const clearBtn = document.querySelector('.js-clear-btn');
-
-  textInput.addEventListener('input', function() {
-    charCount.textContent = `文字数: ${textInput.value.length}`;
-  });
-
-  clearBtn.addEventListener('click', function() {
-    textInput.value = '';
-    charCount.textContent = `文字数: 0`;
-  });
-}
-
-// ===================================
-// L3-S9-6:
-// '.js-checkbox-all'要素(チェックボックス)をクリックしたときに、'.js-checkbox-item'要素(すべてのチェックボックス)のcheckedプロパティを'.js-checkbox-all'要素のcheckedプロパティと同じ状態にする。
-// '.js-checked-count'要素に「選択数: [チェックされた.js-checkbox-itemの数]」を表示する。
-// ===================================
-function L3_S9_6() {
-  const checkboxAll = document.querySelector('.js-checkbox-all');
-  const checkboxItems = document.querySelectorAll('.js-checkbox-item');
-  const checkedCount = document.querySelector('.js-checked-count');
-
-  function updateCount() {
-    const count = document.querySelectorAll('.js-checkbox-item:checked').length;
-    checkedCount.textContent = `選択数: ${count}`;
-  }
-
-  checkboxAll.addEventListener('click', function() {
-    checkboxItems.forEach(function(item) {
-      item.checked = checkboxAll.checked;
-    });
-    updateCount();
-  });
-
-  checkboxItems.forEach(function(item) {
-    item.addEventListener('change', updateCount);
-  });
-}
+L3_S9_4();

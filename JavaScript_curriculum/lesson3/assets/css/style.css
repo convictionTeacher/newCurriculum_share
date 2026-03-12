@@ -1,13 +1,6 @@
 /* ===================================
 JavaScript lesson3 StyleCSS
 =================================== */
-.p-box {
-  border: 2px solid var(--color-gray-15);
-  border-radius: 8px;
-  background-color: var(--color-gray-30);
-  transition: all 0.3s ease;
-}
-
 .p-error {
   color: var(--color-error);
   font-size: var(--size-sm);
@@ -54,14 +47,6 @@ JavaScript lesson3 StyleCSS
   background-color: #e53e3e;
 }
 
-.p-demo {
-  background-color: var(--color-primary-light);
-  border: 1px solid var(--color-gray-15);
-  border-radius: 8px;
-  padding: 16px;
-  margin-top: 16px;
-}
-
 .p-task__output {
   background-color: var(--color-gray-28);
   border: 1px solid var(--color-gray-15);
@@ -93,11 +78,4 @@ JavaScript lesson3 StyleCSS
 
 .p-checkbox-label:has(input[type="checkbox"]:checked) {
   background-color: transparent;
-}
-
-.c-input[rows] {
-  width: 100%;
-  resize: vertical;
-  font-family: inherit;
-  padding: 8px 12px;
 }
