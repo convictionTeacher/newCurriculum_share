@@ -22,7 +22,7 @@
       </header>
       <main class="l-main">
         <!-- Step1 -->
-        <div class="p-section js-section">
+        <section class="p-section js-section">
           <div class="p-section__title">
             <div class="p-section__title--content">
               <div class="p-section__title--top">
@@ -49,19 +49,19 @@
               <div class="p-quiz__container">
                 <div class="p-quiz__item js-quizItem">
                   <h4 class="c-title-question">Q1: コンソールに表示される内容として正しいものを選んでください。</h4>
-                  <div class="c-code u-mb-16">const userName = "山田太郎";<br />console.log(userName);</div>
+                  <div class="c-code u-mb-16">let score;<br />console.log(score);</div>
                   <div class="p-choice js-choices">
-                    <label class="p-choice__item"><input type="radio" name="q1_1" value="a" /> userName</label>
-                    <label class="p-choice__item"><input type="radio" name="q1_1" value="b" /> 山田太郎</label>
-                    <label class="p-choice__item"><input type="radio" name="q1_1" value="c" /> "userName"</label>
-                    <label class="p-choice__item"><input type="radio" name="q1_1" value="d" /> let userName</label>
+                    <label class="p-choice__item"><input type="radio" name="q1_1" value="a" /> 0</label>
+                    <label class="p-choice__item"><input type="radio" name="q1_1" value="b" /> undefined</label>
+                    <label class="p-choice__item"><input type="radio" name="q1_1" value="c" /> null</label>
+                    <label class="p-choice__item"><input type="radio" name="q1_1" value="d" /> エラー</label>
                   </div>
                   <div class="p-result u-mb-10 js-quiz-result--11">
                     <span class="js-quiz-message--11 u-color-message u-hide">選択肢を選んでください。</span>
                     <span class="js-quiz-correct--11 u-color-normal u-hide">〇 正解！</span>
                     <span class="js-quiz-incorrect--11 u-color-warning u-hide">
                       ✕ 不正解。<br />
-                      正解は「山田太郎」です。変数userNameの値が出力されます。
+                      正解は「undefined」です。letで宣言しただけで値を代入していない変数にはundefinedが入ります。
                     </span>
                   </div>
                   <button data-quiz-id="q1_1" data-step-question-id="11" class="c-btn">答えを確認</button>
@@ -95,18 +95,18 @@
             </div>
             <div class="p-blank">
               <div class="p-blank__item js-blankItem">
-                <h4 class="c-title-question">Q1: 商品名を保存し、コンソールに表示するコードの空欄を埋めてください。再代入はありません。</h4>
+                <h4 class="c-title-question">Q1: 名前が2文字かどうかを確認するコードの空欄を埋めてください。</h4>
                 <div class="c-code -blank">
-                  <label for="blank1-11" class="c-label-input">Variable declaration</label>
-                  <input type="text" class="c-input js-blank--1" id="blank1-11" placeholder="①" /> productName = "ワイヤレスイヤホン";<br />
-                  console.log(<label for="blank1-12" class="c-label-input">Variable name</label> <input type="text" class="c-input js-blank--2" id="blank1-12" placeholder="②" />);
+                  const name = "田中";<br />
+                  console.log(name.<label for="blank1-11" class="c-label-input">文字数を取得するプロパティ</label><input type="text" class="c-input js-blank--1" id="blank1-11" placeholder="①" /> ===
+                  <label for="blank1-12" class="c-label-input">文字数</label><input type="text" class="c-input js-blank--2" id="blank1-12" placeholder="②" />);
                 </div>
                 <div class="p-result u-mb-10 js-blank-result--11">
                   <span class="js-blank-correct--11 u-color-normal u-hide">〇 正解！</span>
                   <span class="js-blank-incorrect--11 u-color-warning u-hide">
                     ✕ 不正解。<br />
-                    正解は ①const ②productName です。<br />
-                    constは再代入しない変数宣言、productNameは同じ変数名を使用します。
+                    正解は ①length ②2 です。<br />
+                    lengthプロパティで文字列の文字数を取得し、===で数値と比較します。
                   </span>
                 </div>
                 <button data-blank-id="11" class="c-btn">答えを確認</button>
@@ -150,9 +150,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!-- Step2 -->
-        <div class="p-section js-section">
+        <section class="p-section js-section">
           <div class="p-section__title">
             <div class="p-section__title--content">
               <div class="p-section__title--top">
@@ -281,9 +281,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!-- Step3 -->
-        <div class="p-section js-section">
+        <section class="p-section js-section">
           <div class="p-section__title">
             <div class="p-section__title--content">
               <div class="p-section__title--top">
@@ -409,9 +409,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!-- Step4 -->
-        <div class="p-section js-section">
+        <section class="p-section js-section">
           <div class="p-section__title">
             <div class="p-section__title--content">
               <div class="p-section__title--top">
@@ -542,9 +542,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!-- Step5 -->
-        <div class="p-section js-section">
+        <section class="p-section js-section">
           <div class="p-section__title">
             <div class="p-section__title--content">
               <div class="p-section__title--top">
@@ -674,9 +674,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!-- Step6 -->
-        <div class="p-section js-section">
+        <section class="p-section js-section">
           <div class="p-section__title">
             <div class="p-section__title--content">
               <div class="p-section__title--top">
@@ -800,9 +800,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!-- Step7 -->
-        <div class="p-section js-section">
+        <section class="p-section js-section">
           <div class="p-section__title">
             <div class="p-section__title--content">
               <div class="p-section__title--top">
@@ -929,9 +929,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!-- Step8 -->
-        <div class="p-section js-section">
+        <section class="p-section js-section">
           <div class="p-section__title">
             <div class="p-section__title--content">
               <div class="p-section__title--top">
@@ -1005,9 +1005,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!-- Step9 -->
-        <div class="p-section js-section">
+        <section class="p-section js-section">
           <div class="p-section__title">
             <div class="p-section__title--content">
               <div class="p-section__title--top">
@@ -1144,9 +1144,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!-- Step10 -->
-        <div class="p-section js-section">
+        <section class="p-section js-section">
           <div class="p-section__title">
             <div class="p-section__title--content">
               <div class="p-section__title--top">
@@ -1209,7 +1209,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
       <footer class="l-footer">
         <span class="material-icons">school</span>

@@ -155,7 +155,7 @@ L3_S8_1();
 // ===================================
 // L3-S8-2:
 // '.js-add-s8'要素にクリックイベントを委譲で設定する。
-// その要素をクリック時に'.js-menu-s8'要素の中に'.js-newItem-s8'を持つ新しいli要素"ジュース"を追加する。
+// その要素をクリック時に'.js-menu-s8'要素の中に'.js-newItem-s8'を持つ新しいli要素の「ジュース」を追加する。
 // デザインは他のカードと統一する。
 // ===================================
 function L3_S8_2() {
@@ -172,8 +172,8 @@ function L3_S8_2() {
 L3_S8_2();
 // ===================================
 // L3-S9-1:
-// ①.js-nameInput-s9要素に名前、.js-ageInput-s9要素に年齢を入力し.js-register-s9要素をクリックする。
-// ②入力内容を.js-userResult-s9要素に「名前: "入力した名前", 年齢:"入力した年齢"歳」の形式で表示する。
+// ①.js-nameInput-s9要素のテキストに名前、.js-ageInput-s9要素のテキストに年齢を入力し.js-register-s9要素をクリックする。
+// ②入力内容を.js-userResult-s9要素に「名前: [入力した名前], 年齢: [入力した年齢]歳」の形式で表示する。
 // ===================================
 function L3_S9_1() {
   const q9_1 = document.querySelector("#q9_1");
@@ -190,7 +190,7 @@ L3_S9_1();
 // L3-S9-2:
 // ①.js-numLeft-s9、.js-numRight-s9要素に数値を入力する。
 // ②.js-addBtn-s9、.js-subtractBtn-s9、.js-multiplyBtn-s9、.js-divideBtn-s9要素をクリックで各計算を実行する。
-// ③結果を.js-calcResult-s9要素に「結果:[計算結果]」の形式で表示する。
+// ③結果を.js-calcResult-s9要素のテキストに計算結果を表示する。
 // ===================================
 function L3_S9_2() {
   const q9_2 = document.querySelector("#q9_2");
@@ -255,8 +255,8 @@ function L3_S9_3() {
 L3_S9_3();
 // ===================================
 // L3-S9-4:
-// ①.js-textInput-s9要素にテキストを入力のたびに.js-charCount-s9要素に"文字数"を表示する。
-// ③.js-clearBtn-s9要素をクリックでテキストエリアを空にし、.js-char-count要素を"0"に更新する。
+// ①.js-textInput-s9要素にテキストを入力のたびに.js-charCount-s9要素のテキストに文字数を表示する。
+// ②.js-clearBtn-s9要素をクリックでテキストエリアを空にし、.js-charCount-s9要素のテキストを「0」に更新する。
 // ===================================
 function L3_S9_4() {
   const root = document.querySelector("#q9_4");

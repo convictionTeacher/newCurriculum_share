@@ -9,20 +9,22 @@
  * @type {Object.<string, string>}
  */
 window.QUIZ_ANSWERS = {
-  q1_1: "c",
-  q1_2: "b",
-  q2_1: "b",
-  q2_2: "b",
+  q1_1: "b",
+  q1_2: "c",
+  q2_1: "a",
+  q2_2: "a",
   q3_1: "b",
-  q3_2: "a",
-  q4_1: "d",
-  q4_2: "a",
-  q5_1: "a",
-  q5_2: "a",
+  q3_2: "c",
+  q4_1: "b",
+  q4_2: "c",
+  q5_1: "b",
+  q5_2: "b",
   q6_1: "b",
-  q6_2: "b",
+  q6_2: "d",
   q7_1: "a",
-  q7_2: "b",
+  q7_2: "d",
+  q8_1: "c",
+  q8_2: "b",
 };
 
 /**
@@ -31,73 +33,83 @@ window.QUIZ_ANSWERS = {
  */
 window.BLANK_ANSWERS = {
   11: {
-    inputs: [".js-blank--1", ".js-blank--2"],
-    answers: ["if", ">="],
-    validation: "default",
-  },
-  12: {
-    inputs: [".js-blank--3", ".js-blank--4"],
-    answers: ["if", "60"],
-    validation: "default",
-  },
-  21: {
-    inputs: [".js-blank--5", ".js-blank--6"],
-    answers: ["===", "else"],
-    validation: "default",
-  },
-  22: {
-    inputs: [".js-blank--7", ".js-blank--8"],
-    answers: ["成人", "未成年"],
-    validation: "flexible_quote",
-  },
-  31: {
-    inputs: [".js-blank--9", ".js-blank--10"],
-    answers: ["else", "if"],
-    validation: "default",
-  },
-  32: {
-    inputs: [".js-blank--11", ".js-blank--12"],
-    answers: ["おはよう", "こんにちは"],
-    validation: "flexible_quote",
-  },
-  41: {
-    inputs: [".js-blank--13"],
+    inputs: [".js-blank--11-1"],
     answers: ["==="],
     validation: "default",
   },
-  42: {
-    inputs: [".js-blank--14", ".js-blank--15"],
-    answers: [">=", "<="],
+  12: {
+    inputs: [".js-blank--12-1"],
+    answers: ["!=="],
     validation: "default",
   },
-  51: {
-    inputs: [".js-blank--16"],
+  21: {
+    inputs: [".js-blank--21-1"],
     answers: ["&&"],
     validation: "default",
   },
-  52: {
-    inputs: [".js-blank--17"],
+  22: {
+    inputs: [".js-blank--22-1"],
     answers: ["||"],
     validation: "default",
   },
+  31: {
+    inputs: [".js-blank--31-1", ".js-blank--31-2"],
+    answers: ["length", "5"],
+    validation: "default",
+  },
+  32: {
+    inputs: [".js-blank--32-1"],
+    answers: ["!=="],
+    validation: "default",
+  },
+  41: {
+    inputs: [".js-blank--41-1", ".js-blank--41-2"],
+    answers: ["toggleSwitch", "checked"],
+    validation: "default",
+  },
+  42: {
+    inputs: [".js-blank--42-1"],
+    answers: ["contains"],
+    validation: "default",
+  },
+  51: {
+    inputs: [".js-blank--51-1"],
+    answers: ["==="],
+    validation: "default",
+  },
+  52: {
+    inputs: [".js-blank--52-1", ".js-blank--52-2"],
+    answers: ["<", "<"],
+    validation: "default",
+  },
   61: {
-    inputs: [".js-blank--18", ".js-blank--19", ".js-blank--20", ".js-blank--21"],
-    answers: ["switch", "case", "break", "default"],
+    inputs: [".js-blank--61-1", ".js-blank--61-2"],
+    answers: ["!", "btn"],
     validation: "default",
   },
   62: {
-    inputs: [".js-blank--22", ".js-blank--23"],
-    answers: ["月曜日", "火曜日"],
-    validation: "flexible_quote",
+    inputs: [".js-blank--62-1"],
+    answers: ["closest"],
+    validation: "default",
   },
   71: {
-    inputs: [".js-blank--24", ".js-blank--25"],
-    answers: ["?", ":"],
+    inputs: [".js-blank--71-1"],
+    answers: ["case"],
     validation: "default",
   },
   72: {
-    inputs: [".js-blank--26", ".js-blank--27"],
-    answers: ["active", "inactive"],
-    validation: "flexible_quote",
+    inputs: [".js-blank--72-1"],
+    answers: ["closest"],
+    validation: "default",
+  },
+  81: {
+    inputs: [".js-blank--81-1", ".js-blank--81-2"],
+    answers: ["?", ":"],
+    validation: "default",
+  },
+  82: {
+    inputs: [".js-blank--82-1", ".js-blank--82-2"],
+    answers: ["?", ":"],
+    validation: "default",
   },
 };

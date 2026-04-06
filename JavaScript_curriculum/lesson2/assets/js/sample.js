@@ -209,15 +209,15 @@ function L2_S9_1_2_3() {
 L2_S9_1_2_3();
 // ===================================
 // L2-S10-1:
-// ① '.js-name-step10'要素のテキストを"田中祐美"に変更する。
-// ② '.js-status-step10'要素のテキストを"承認済み"へ変更する。
-// ③ ②で変更した'.js-status-step10'要素の親要素のdata-role属性値を"member"へ変更し、'.is-active'を追加する。
+// ① '.js-name-s10'要素のテキストを"田中祐美"に変更する。
+// ② '.js-status-s10'要素のテキストを"承認済み"へ変更する。
+// ③ ②で変更した'.js-status-s10'要素の親要素のdata-role属性値を"member"へ変更し、'.is-active'を追加する。
 // ===================================
 function L2_S10_1() {
   const q10_1 = document.querySelector("#q10_1");
-  const nameElement = q10_1.querySelector(".js-name-step10");
+  const nameElement = q10_1.querySelector(".js-name-s10");
   nameElement.textContent = "田中祐美";
-  const statusElement = q10_1.querySelector(".js-status-step10");
+  const statusElement = q10_1.querySelector(".js-status-s10");
   statusElement.textContent = "承認済み";
   const parent = nameElement.closest(".p-practice__card"); // const parent = statusElement.parentElement;でも可
   parent.dataset.role = "member";
@@ -226,14 +226,14 @@ function L2_S10_1() {
 L2_S10_1();
 // ===================================
 // L2-S10-2:
-// ① '.js-link-step10'要素のhref属性の値を"https://www.google.com/"に変更する。
+// ① '.js-link-s10'要素のhref属性の値を"https://www.google.com/"に変更する。
 // ② 属性にtarget="_blank"を追加し別タブで開くように設定する。
 // ③ '.-disabled'を削除しボタンを有効化する。
-// ④ '.js-link-step10'要素から最も近い親要素'.p-practice__card'要素を取得し、その親要素内の最後の子要素を削除する。
+// ④ '.js-link-s10'要素から最も近い親要素'.p-practice__card'要素を取得し、その親要素内の最後の子要素を削除する。
 // ===================================
 function L2_S10_2() {
   const q10_2 = document.querySelector("#q10_2");
-  const link = q10_2.querySelector(".js-link-step10");
+  const link = q10_2.querySelector(".js-link-s10");
   link.setAttribute("href", "https://www.google.com/");
   link.setAttribute("target", "_blank");
   link.classList.remove("-disabled");
@@ -244,16 +244,16 @@ L2_S10_2();
 // ===================================
 // L2-S10-3:
 // ① 初期表示時に、data-icon="javascript"を持つラジオボタンを選択状態にする。
-// ② '.js-container-step10'の子要素から、現在チェックされている入力要素を取得する。
-// ③ その選択された要素のテキストを'.js-result-step10'要素に表示する。
+// ② '.js-container-s10'の子要素から、現在チェックされている入力要素を取得する。
+// ③ その選択された要素のテキストを'.js-result-s10'要素に表示する。
 // ===================================
 function L2_S10_3() {
   const q10_3 = document.querySelector("#q10_3");
   const jsInput = q10_3.querySelector('[data-icon="javascript"]');
   jsInput.checked = true;
-  const container = q10_3.querySelector(".js-container-step10");
+  const container = q10_3.querySelector(".js-container-s10");
   const checkedInput = container.querySelector("input:checked");
-  const result = q10_3.querySelector(".js-result-step10");
+  const result = q10_3.querySelector(".js-result-s10");
   result.textContent = checkedInput.value;
 }
 L2_S10_3();

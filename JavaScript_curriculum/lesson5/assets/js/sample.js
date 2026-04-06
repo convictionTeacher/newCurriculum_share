@@ -14,12 +14,13 @@ function L5_S1_1() {
 
 // ===================================
 // L5-S1-2:
-// for文を使って、9から1までカウントダウンを'js-countDown-step1'要素のテキストに表示する。
+// for文を使って、9から1までカウントダウンを'.js-countDown-s1'要素のテキストに表示する。
 // 出力例：987654321
 // ===================================
 function L5_S1_2() {
-  const countDown = document.querySelector('.js-countDown-step1');
-  let result = '';
+  const q1 = document.querySelector("#q1");
+  const countDown = q1.querySelector(".js-countDown-s1");
+  let result = "";
   for (let i = 9; i >= 1; i--) {
     result += i;
   }
@@ -28,11 +29,12 @@ function L5_S1_2() {
 
 // ===================================
 // L5-S1-3:
-// for文を使って1から10までの数字を順番に足し、合計を'js-number-step1'要素のテキストへ出力する。
+// for文を使って1から10までの数字を順番に足し、合計を'.js-number-s1'要素のテキストへ出力する。
 // 出力例：55
 // ===================================
 function L5_S1_3() {
-  const numberElement = document.querySelector('.js-number-step1');
+  const q1 = document.querySelector("#q1");
+  const numberElement = q1.querySelector(".js-number-s1");
   let sum = 0;
   for (let i = 1; i <= 10; i++) {
     sum += i;
@@ -42,10 +44,11 @@ function L5_S1_3() {
 
 // ===================================
 // L5-S2-1:
-// すべての'.js-btn-step2'要素を全てまとめて取得して、for文で1つずつ取り出しコンソールに表示する。
+// すべての'.js-btn-s2'要素を全てまとめて取得して、for文で1つずつ取り出しコンソールに表示する。
 // ===================================
 function L5_S2_1() {
-  const buttons = document.querySelectorAll('.js-btn-step2');
+  const q2 = document.querySelector("#q2");
+  const buttons = q2.querySelectorAll(".js-btn-s2");
   for (let i = 0; i < buttons.length; i++) {
     console.log(buttons[i]);
   }
@@ -53,10 +56,11 @@ function L5_S2_1() {
 
 // ===================================
 // L5-S2-2:
-// for文を使ってすべての'.js-btn-step2'要素のテキストを「更新」に変更する。
+// for文を使ってすべての'.js-btn-s2'要素のテキストを「更新」に変更する。
 // ===================================
 function L5_S2_2() {
-  const buttons = document.querySelectorAll('.js-btn-step2');
+  const q2 = document.querySelector("#q2");
+  const buttons = q2.querySelectorAll(".js-btn-s2");
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].textContent = "更新";
   }
@@ -64,10 +68,11 @@ function L5_S2_2() {
 
 // ===================================
 // L5-S2-3:
-// for文を使ってすべての'.js-btn-step2'要素にdisabled属性を付与する。
+// for文を使ってすべての'.js-btn-s2'要素にdisabled属性を付与する。
 // ===================================
 function L5_S2_3() {
-  const buttons = document.querySelectorAll('.js-btn-step2');
+  const q2 = document.querySelector("#q2");
+  const buttons = q2.querySelectorAll(".js-btn-s2");
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].disabled = true;
   }
@@ -75,30 +80,16 @@ function L5_S2_3() {
 
 // ===================================
 // L5-S3-1:
-// while文を使って、10から1までカウントダウンを画面に表示する。
+// while文を使って、0から10までの偶数のみを'.js-num-s3'要素のテキストに表示する。
 // ===================================
 function L5_S3_1() {
-  const display = document.querySelector('.js-countdown-step3');
-  let count = 10;
-  let result = '';
-  while (count >= 1) {
-    result += count + ' ';
-    count--;
-  }
-  display.textContent = result;
-}
-
-// ===================================
-// L5-S3-2:
-// while文を使って、0から10までの偶数のみを画面に表示する。
-// ===================================
-function L5_S3_2() {
-  const display = document.querySelector('.js-even-step3');
+  const q3 = document.querySelector("#q3");
+  const display = q3.querySelector(".js-num-s3");
   let num = 0;
-  let result = '';
+  let result = "";
   while (num <= 10) {
     if (num % 2 === 0) {
-      result += num + ' ';
+      result += num + " ";
     }
     num++;
   }
@@ -106,15 +97,32 @@ function L5_S3_2() {
 }
 
 // ===================================
+// L5-S3-2:
+// '.js-button-s3'要素をクリックしたら、prompt()で「文字を入力してください。」と表示する。
+// while文を使って、文字が入力されるまで入力を求める。
+// ===================================
+function L5_S3_2() {
+  const q3 = document.querySelector("#q3");
+  const button = q3.querySelector(".js-button-s3");
+  button.addEventListener("click", () => {
+    let inputPrompt = "";
+    while (inputPrompt === "") {
+      inputPrompt = prompt("文字を入力してください。");
+    }
+  });
+}
+
+// ===================================
 // L5-S4-1:
-// do-while文を使って、条件を満たすまで処理を繰り返す。
+// do-while文を使って、1から5まで数字を'.js-num-s4'要素のテキストに表示する。
 // ===================================
 function L5_S4_1() {
-  const display = document.querySelector('.js-result-step4');
+  const q4 = document.querySelector("#q4");
+  const display = q4.querySelector(".js-num-s4");
   let count = 1;
-  let result = '';
+  let result = "";
   do {
-    result += count + ' ';
+    result += count + " ";
     count++;
   } while (count <= 5);
   display.textContent = result;
@@ -122,17 +130,18 @@ function L5_S4_1() {
 
 // ===================================
 // L5-S4-2:
-// do-while文を使って、1から5までの数字を画面に表示する。
+// '.js-button-s4'要素をクリックしたら、do-while文とconfirm()を使って「利用規約を確認しましたか？」と必ず1回表示する。
+// OKボタンを押した場合は処理を終了し、キャンセルボタンを押した場合は、再度「利用規約を確認しましたか？」と表示する。
 // ===================================
 function L5_S4_2() {
-  const display = document.querySelector('.js-numbers-step4');
-  let num = 1;
-  let result = '';
-  do {
-    result += num + ' ';
-    num++;
-  } while (num <= 5);
-  display.textContent = result;
+  const q4 = document.querySelector("#q4");
+  const button = q4.querySelector(".js-button-s4");
+  button.addEventListener("click", () => {
+    let checked;
+    do {
+      checked = confirm("利用規約を確認しましたか？");
+    } while (checked === false);
+  });
 }
 
 // ===================================
@@ -141,8 +150,7 @@ function L5_S4_2() {
 // また、10より大きい数になったらループを終了する(breakを使用)。
 // ===================================
 function L5_S5_1() {
-  const display = document.querySelector('.js-continue-step5');
-  let result = '';
+  let result = "";
   for (let i = 1; i <= 20; i++) {
     if (i > 10) {
       break;
@@ -150,21 +158,21 @@ function L5_S5_1() {
     if (i % 2 !== 0) {
       continue;
     }
-    result += i + ' ';
+    result += i + " ";
+    console.log(i);
   }
-  display.textContent = result;
 }
 
 // ===================================
 // L5-S5-2:
-// すべての'.js-item-stepFive'要素をループし、テキストが"特別"の要素を見つけたらループを終了し、「見つかりました」と画面に表示する(breakを使用)。
+// すべての'.js-item-s5'要素をループし、テキストが"特別"の要素を見つけたらループを終了し、「見つかりました」と画面に表示する(breakを使用)。
 // ===================================
 function L5_S5_2() {
-  const items = document.querySelectorAll('.js-item-stepFive');
-  const display = document.querySelector('.js-break-step5');
+  const q5 = document.querySelector("#q5");
+  const items = q5.querySelectorAll(".js-item-s5");
   for (let i = 0; i < items.length; i++) {
     if (items[i].textContent === "特別") {
-      display.textContent = "見つかりました";
+      console.log("見つかりました");
       break;
     }
   }
@@ -172,23 +180,24 @@ function L5_S5_2() {
 
 // ===================================
 // L5-S6-1:
-// ネストされたループを使って、九九表(1の段～9の段)を画面に表示する。
+// ネストされたループを使って、九九表(1の段～9の段)を'.js-multiTable-s6'要素に表示する。
 // ===================================
 function L5_S6_1() {
-  const display = document.querySelector('.js-multiplication-step6');
-  let result = '';
+  const q6 = document.querySelector("#q6");
+  const display = q6.querySelector(".js-multiTable-s6");
+  let result = "";
   for (let i = 1; i <= 9; i++) {
     for (let j = 1; j <= 9; j++) {
-      result += i + ' × ' + j + ' = ' + (i * j) + '<br>';
+      result += i + " × " + j + " = " + i * j + "<br>";
     }
-    result += '<br>';
+    result += "<br>";
   }
   display.innerHTML = result;
 }
 
 // ===================================
 // L5-S6-2:
-// ネストされたループを使って、以下のような三角形を画面に表示する。
+// ネストされたループを使って、以下のような三角形を'.js-triangle-s6'要素に表示する。
 // *
 // **
 // ***
@@ -196,23 +205,25 @@ function L5_S6_1() {
 // *****
 // ===================================
 function L5_S6_2() {
-  const display = document.querySelector('.js-triangle-step6');
-  let result = '';
+  const q6 = document.querySelector("#q6");
+  const display = q6.querySelector(".js-triangle-s6");
+  let result = "";
   for (let i = 1; i <= 5; i++) {
     for (let j = 1; j <= i; j++) {
-      result += '*';
+      result += "*";
     }
-    result += '<br>';
+    result += "<br>";
   }
   display.innerHTML = result;
 }
 
 // ===================================
 // L5-S7-1:
-// すべての'.js-item-stepSeven'要素を、ループを使ってコンソールに表示する。
+// すべての'.js-item-s7'要素を、ループを使ってコンソールに表示する。
 // ===================================
 function L5_S7_1() {
-  const items = document.querySelectorAll('.js-item-stepSeven');
+  const q7 = document.querySelector("#q7");
+  const items = q7.querySelectorAll(".js-item-s7");
   for (let i = 0; i < items.length; i++) {
     console.log(items[i]);
   }
@@ -220,10 +231,11 @@ function L5_S7_1() {
 
 // ===================================
 // L5-S7-2:
-// すべての'.js-button-stepSeven'要素のテキストを「完了」に変更して、画面に表示する。
+// すべての'.js-button-s7'要素のテキストを「完了」に変更して、画面に表示する。
 // ===================================
 function L5_S7_2() {
-  const buttons = document.querySelectorAll('.js-button-stepSeven');
+  const q7 = document.querySelector("#q7");
+  const buttons = q7.querySelectorAll(".js-button-s7");
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].textContent = "完了";
   }
@@ -231,98 +243,98 @@ function L5_S7_2() {
 
 // ===================================
 // L5-S8-1:
-// すべての'.js-card-stepEight'要素の個数をカウントして、画面に表示する。
+// すべての'.js-card-s8'要素の個数をカウントして、'.js-cardCount-s8'要素に表示する。
 // ===================================
 function L5_S8_1() {
-  const cards = document.querySelectorAll('.js-card-stepEight');
-  const display = document.querySelector('.js-card-count-stepEight');
+  const q8 = document.querySelector("#q8");
+  const cards = q8.querySelectorAll(".js-card-s8");
+  const display = q8.querySelector(".js-cardCount-s8");
   display.textContent = `カード数: ${cards.length}個`;
 }
 
 // ===================================
 // L5-S8-2:
-// すべての'.js-item-stepEight'要素をループし、偶数番目の要素に'active'クラスを追加する。
+// すべての'.js-item-s8'要素をループし、偶数番目の要素に'active'クラスを追加する。
 // ===================================
 function L5_S8_2() {
-  const items = document.querySelectorAll('.js-item-stepEight');
+  const q8 = document.querySelector("#q8");
+  const items = q8.querySelectorAll(".js-item-s8");
   for (let i = 0; i < items.length; i++) {
     if ((i + 1) % 2 === 0) {
-      items[i].classList.add('active');
+      items[i].classList.add("active");
     }
   }
 }
 
 // ===================================
 // L5-S9-1:
-// すべての'.js-card-stepNine'要素をループで取得し、以下の処理を実行する。
-// ・偶数番目の要素に'is-hidden'クラスを追加する
-// ・奇数番目の要素に'is-show'クラスを追加する
-// ・表示されているカードの枚数をカウントして、'.js-visibleCount-stepNine'要素に「表示中：X枚」と表示する
-// ・非表示のカードの枚数をカウントして、'.js-hiddenCount-stepNine'要素に「非表示：X枚」と表示する
+// '.js-button-s9'（送信ボタン）をクリックしたときに処理を開始する。
+// for文を使って、3つの'.js-input-s9'要素を上から順に確認する。
+// もし値が空（""）だったら、その入力欄に'is-active'を追加する。
+// '.js-error-s9'要素から'u-hide'を削除して表示し、残りの項目はチェックせずに終了する。
 // ===================================
 function L5_S9_1() {
-  const cards = document.querySelectorAll('.js-card-stepNine');
-  let visibleCount = 0;
-  let hiddenCount = 0;
+  const q9_1 = document.querySelector("#q9_1");
+  const submitBtn = q9_1.querySelector(".js-button-s9");
+  const inputs = q9_1.querySelectorAll(".js-input-s9");
+  const errorMessage = q9_1.querySelector(".js-error-s9");
 
-  for (let i = 0; i < cards.length; i++) {
-    if ((i + 1) % 2 === 0) {
-      cards[i].classList.add('is-hidden');
-      hiddenCount++;
-    } else {
-      cards[i].classList.add('is-show');
-      visibleCount++;
+  submitBtn.addEventListener("click", () => {
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].value === "") {
+        inputs[i].classList.add("is-active");
+        errorMessage.classList.remove("u-hide");
+        break;
+      }
     }
-  }
-
-  const visibleDisplay = document.querySelector('.js-visibleCount-stepNine');
-  const hiddenDisplay = document.querySelector('.js-hiddenCount-stepNine');
-  visibleDisplay.textContent = `表示中：${visibleCount}枚`;
-  hiddenDisplay.textContent = `非表示：${hiddenCount}枚`;
+  });
 }
 
 // ===================================
 // L5-S9-2:
-// すべての'.js-button-stepNine'要素をループで処理し、以下の処理を実行する。
+// すべての'.js-button-s9'要素をループで処理し、以下の処理を実行する。
 // ・すべてのボタンのテキストを「処理済み」に変更する
 // ・3番目以降のボタンに'is-disabled'クラスを追加する
-// ・処理したボタンの総数を'.js-buttonCount-stepNine'要素に「ボタン総数：X個」と表示する
-// ・'is-disabled'クラスが付いているボタンの個数を'.js-disabledCount-stepNine'要素に「無効：X個」と表示する
+// ・処理したボタンの総数を'.js-buttonCount-s9'要素に「ボタン総数：X個」と表示する
+// ・'is-disabled'クラスが付いているボタンの個数を'.js-disabledCount-s9'要素に「無効：X個」と表示する
 // ===================================
 function L5_S9_2() {
-  const buttons = document.querySelectorAll('.js-button-stepNine');
+  const q9_2 = document.querySelector("#q9_2");
+  const buttons = q9_2.querySelectorAll(".js-button-s9");
   let disabledCount = 0;
 
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].textContent = "処理済み";
     if (i >= 2) {
-      buttons[i].classList.add('is-disabled');
+      buttons[i].classList.add("is-disabled");
       disabledCount++;
     }
   }
 
-  const buttonCountDisplay = document.querySelector('.js-buttonCount-stepNine');
-  const disabledCountDisplay = document.querySelector('.js-disabledCount-stepNine');
+  const buttonCountDisplay = q9_2.querySelector(".js-buttonCount-s9");
+  const disabledCountDisplay = q9_2.querySelector(".js-disabledCount-s9");
   buttonCountDisplay.textContent = `ボタン総数：${buttons.length}個`;
   disabledCountDisplay.textContent = `無効：${disabledCount}個`;
 }
 
 // ===================================
 // L5-S9-3:
-// ネストされたループを使って、3の段(3×1から3×9まで)を「3 × 1 = 3」の形式で3の段エリアに表示する。
-// 同様に5の段(5×1から5×9まで)を5の段エリアに、7の段(7×1から7×9まで)を7の段エリアに表示する。
-// 1の段から9の段まですべての計算を行い、積が30以上になる計算式のみを「X × Y = Z」の形式で抽出し、積が30以上の計算式エリアに表示する(最初の10個まで表示し、10個見つかったらループを終了する)。
+// ネストされたループを使って、3の段(3×1から3×9まで)を「3 × 1 = 3」の形式で'.js-table3-s9'要素に表示する。
+// 同様に5の段(5×1から5×9まで)を'.js-table5-s9'要素に、7の段(7×1から7×9まで)を'.js-table7-s9'要素に表示する。
+// 1の段から9の段まですべての計算を行い、積が30以上になる計算式のみを「X × Y = Z」の形式で抽出し、
+// '.js-over30-s9'要素に表示する(最初の10個まで表示し、10個見つかったらループを終了する)。
 // ===================================
 function L5_S9_3() {
-  const area3 = document.querySelector('.js-multiplication3-stepNine');
-  const area5 = document.querySelector('.js-multiplication5-stepNine');
-  const area7 = document.querySelector('.js-multiplication7-stepNine');
-  const area30 = document.querySelector('.js-multiplication30-stepNine');
+  const q9_3 = document.querySelector("#q9_3");
+  const area3 = q9_3.querySelector(".js-table3-s9");
+  const area5 = q9_3.querySelector(".js-table5-s9");
+  const area7 = q9_3.querySelector(".js-table7-s9");
+  const area30 = q9_3.querySelector(".js-over30-s9");
 
-  let result3 = '';
-  let result5 = '';
-  let result7 = '';
-  let result30 = '';
+  let result3 = "";
+  let result5 = "";
+  let result7 = "";
+  let result30 = "";
   let count30 = 0;
 
   // 3の段

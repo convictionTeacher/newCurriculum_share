@@ -34,7 +34,7 @@ window.QUIZ_ANSWERS = {
  * @type {Object.<string, {inputs: string[], answers: string[], validation: string}>}
  */
 window.BLANK_ANSWERS = {
-  11: { inputs: [".js-blank--1", ".js-blank--2"], answers: ["const", "productName"], validation: "default" },
+  11: { inputs: [".js-blank--1", ".js-blank--2"], answers: ["length", "2"], validation: "default" },
   12: { inputs: [".js-blank--4", ".js-blank--5"], answers: ["let", "log"], validation: "default" },
   21: { inputs: [".js-blank--7", ".js-blank--8"], answers: ["const", "980"], validation: "default" },
   22: { inputs: [".js-blank--9", ".js-blank--10"], answers: ["let", "150"], validation: "default" },

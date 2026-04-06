@@ -290,7 +290,8 @@ JavaScript_curriculum/
   <script src="../common/assets/js/config.js"></script>
   <script src="assets/js/script.js"></script>
   <script src="assets/js/curriculum.js"></script>
-  <script src="assets/js/sample.js"></script><!-- 解答例（削除可能） -->
+  <script src="assets/js/sample.js"></script>
+  <!-- 解答例（削除可能） -->
   ```
 - **注意**:
   - ファイルが存在しない場合でも動作に影響しない
@@ -325,20 +326,20 @@ L[lesson番号]-S[step番号]-[課題番号]
 
 HTML の id / class 名で使用する Step 番号の英語表記：
 
-| Step 番号 | 英語表記     | 使用例                  |
-| --------- | ------------ | ----------------------- |
-| Step1     | `stepFirst`  | `.js-button-stepFirst`  |
-| Step2     | `stepSecond` | `.js-item-stepSecond`   |
-| Step3     | `stepThird`  | `.js-title-stepThird`   |
-| Step4     | `stepFour`   | `.js-input-stepFour`    |
-| Step5     | `stepFive`   | `.js-list-stepFive`     |
-| Step6     | `stepSix`    | `.js-card-stepSix`      |
-| Step7     | `stepSeven`  | `.js-link-stepSeven`    |
-| Step8     | `stepEight`  | `.js-form-stepEight`    |
-| Step9     | `stepNine`   | `.js-menu-stepNine`     |
-| Step10    | `stepTen`    | `.js-container-stepTen` |
-| Step11    | `stepEleven` | `.js-form-stepEleven`   |
-| Step12    | `stepTwelve` | `.js-item-stepTwelve`   |
+| Step 番号 | 英語表記     | 使用例              |
+| --------- | ------------ | ------------------- |
+| Step1     | `stepFirst`  | `.js-button-s1`     |
+| Step2     | `stepSecond` | `.js-item-s2`       |
+| Step3     | `stepThird`  | `.js-title-s3`      |
+| Step4     | `stepFour`   | `.js-input-s4`      |
+| Step5     | `stepFive`   | `.js-list-s5`       |
+| Step6     | `stepSix`    | `.js-card-s6`       |
+| Step7     | `stepSeven`  | `.js-link-s7`       |
+| Step8     | `stepEight`  | `.js-form-s8`       |
+| Step9     | `stepNine`   | `.js-menu-s9`       |
+| Step10    | `stepTen`    | `.js-container-s10` |
+| Step11    | `stepEleven` | `.js-form-s11`      |
+| Step12    | `stepTwelve` | `.js-item-s12`      |
 
 **注意**: 上記は主要な Step 番号の例です。lesson ごとに Step 数は異なります。
 
@@ -420,8 +421,7 @@ HTML の id / class 名で使用する Step 番号の英語表記：
 <div class="p-blank__item js-blankItem">
   <h4 class="c-title-question">Q1: 問題文</h4>
   <div class="c-code -blank">
-    for (let i = <label for="blank-511" class="c-label-input">ラベル説明</label>
-    <input type="text" class="c-input js-blank--51-1" id="blank-511" placeholder="①" />; i &lt;
+    for (let i = <label for="blank-511" class="c-label-input">ラベル説明</label> <input type="text" class="c-input js-blank--51-1" id="blank-511" placeholder="①" />; i &lt;
     <label for="blank-512" class="c-label-input">ラベル説明</label>
     <input type="text" class="c-input js-blank--51-2" id="blank-512" placeholder="②" />; i++) {<br />
     &nbsp;&nbsp;console.log(i);<br />
@@ -441,6 +441,7 @@ HTML の id / class 名で使用する Step 番号の英語表記：
 ```
 
 **構造の重要ポイント**:
+
 - 各入力欄の前に `<label>` タグで説明を追加
 - 各入力欄に固有のIDを付与（形式: `blank-XYZ`）
 - 不正解メッセージには正解と詳しい解説を含める
@@ -465,6 +466,7 @@ HTML の id / class 名で使用する Step 番号の英語表記：
   - 新しい素材が必要な場合は事前に確認する
 
 **HTML構造（必須）**:
+
 ```html
 <div class="p-practice">
   <h2 class="c-title-lesson">タイトル</h2>
@@ -489,6 +491,7 @@ HTML の id / class 名で使用する Step 番号の英語表記：
 ```
 
 **重要な構造ルール**:
+
 - **1つの提出課題タブにつき、ライブデモエリア（`.p-practice`）は1つのみ**
 - `.p-practice__inner` の中に、2問分の操作対象要素を配置
 - `.p-task` 内に2つの `.p-task__item` を記載（課題1と課題2）
@@ -518,16 +521,19 @@ HTML の id / class 名で使用する Step 番号の英語表記：
 **重要**: 総合演習（最後のStep）は、通常のStepとは異なる構造を使用する。
 
 **通常のStep（Step1〜Step7など）の構造**:
+
 - 1つの`.p-practice`ブロック（ライブデモエリア）を最初に配置
 - その後に`.p-task`内に複数の`.p-task__item`を配置
 - 各`.p-task__item`は課題番号と説明文のみ
 
 **総合演習の構造**:
+
 - `.p-practice`ブロックは各課題に埋め込む
 - 各課題（`.p-task__item`）内に専用のデモエリアを配置
 - より複雑で実践的な課題内容
 
 **HTML構造（必須）**:
+
 ```html
 <div class="p-section__tab js-tab-content is-active" data-tab-content="task">
   <div class="p-desc">
@@ -566,9 +572,7 @@ HTML の id / class 名で使用する Step 番号の英語表記：
         <div class="p-practice u-mt-8">
           <!-- 課題2専用のデモエリア -->
         </div>
-        <p>
-          課題の詳細説明。
-        </p>
+        <p>課題の詳細説明。</p>
       </div>
     </div>
 
@@ -578,6 +582,7 @@ HTML の id / class 名で使用する Step 番号の英語表記：
 ```
 
 **構造の重要ポイント**:
+
 1. `.p-task`の中に複数の`.p-task__item`を配置
 2. 各`.p-task__item`は以下を含む：
    - `.c-tag`: 課題番号（L5-S8-1など）
@@ -589,6 +594,7 @@ HTML の id / class 名で使用する Step 番号の英語表記：
 4. 課題説明は複数行にわたり、具体的な処理内容を段階的に記述
 
 **curriculum.jsの記述**:
+
 ```javascript
 // ===================================
 // L5-S8-1: 課題タイトル
@@ -630,12 +636,14 @@ HTML の id / class 名で使用する Step 番号の英語表記：
   - 例: `"株式会社テクノロジー"`
 
 **正しい例**:
+
 ```javascript
 // L2-S3-1: '.js-submitBtn-stepThird' の要素を取得し、
 // 表示テキストを "送信完了" に変更してください。
 ```
 
 **間違った例**:
+
 ```javascript
 // ❌ クラス名がダブルクォート
 // L2-S3-1: ".js-submitBtn-stepThird" の要素を取得し、
@@ -702,7 +710,6 @@ HTML の id / class 名で使用する Step 番号の英語表記：
 **FLOCSS と BEM を使用する**
 
 - **FLOCSS（Foundation / Layout / Object / Component / Project / Utility）**
-
   - `l-` : Layout（レイアウト）
   - `c-` : Component（再利用可能なコンポーネント）
   - `p-` : Project（プロジェクト固有のスタイル）
@@ -780,13 +787,15 @@ HTML の id / class 名で使用する Step 番号の英語表記：
 - 理由: クラス名での取得は実務でより頻繁に使用される
 
 **推奨**:
+
 ```javascript
-const button = document.querySelector('.js-addButton-stepFirst');
+const button = document.querySelector(".js-addButton-stepFirst");
 ```
 
 **最小限にする**:
+
 ```javascript
-const button = document.getElementById('addButton-stepFirst');
+const button = document.getElementById("addButton-stepFirst");
 ```
 
 #### コードブロックの記述ルール
@@ -796,17 +805,23 @@ const button = document.getElementById('addButton-stepFirst');
 - インデントを正しく使用する
 
 **良い例**:
+
 ```javascript
-const button = document.querySelector('.js-addButton-stepFirst');
-button.addEventListener('click', function() {
-  const result = document.querySelector('.js-resultText-stepFirst');
-  result.textContent = 'クリックされました';
+const button = document.querySelector(".js-addButton-stepFirst");
+button.addEventListener("click", function () {
+  const result = document.querySelector(".js-resultText-stepFirst");
+  result.textContent = "クリックされました";
 });
 ```
 
 **悪い例**:
+
 ```javascript
-const button = document.querySelector('.js-addButton-stepFirst');button.addEventListener('click', function() {const result = document.querySelector('.js-resultText-stepFirst');result.textContent = 'クリックされました';});
+const button = document.querySelector(".js-addButton-stepFirst");
+button.addEventListener("click", function () {
+  const result = document.querySelector(".js-resultText-stepFirst");
+  result.textContent = "クリックされました";
+});
 ```
 
 ---

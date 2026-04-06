@@ -208,7 +208,6 @@ JavaScript Curriculum Common StyleCSS
   opacity: 0.5;
   cursor: not-allowed;
   user-select: none;
-  pointer-events: none;
 }
 
 .c-tab:disabled:hover,
@@ -291,6 +290,10 @@ JavaScript Curriculum Common StyleCSS
 
 .c-text.-bold {
   font-weight: 700;
+}
+
+.c-text.-left {
+  text-align: left;
 }
 
 .c-code {
@@ -393,6 +396,10 @@ JavaScript Curriculum Common StyleCSS
   font-size: var(--size-sm-alt);
   cursor: pointer;
   opacity: 0.8;
+}
+
+.c-button-practice.-min-w100 {
+  min-width: 100px;
 }
 
 .c-button-practice:hover {
@@ -734,6 +741,22 @@ JavaScript Curriculum Common StyleCSS
   font-weight: 700;
 }
 
+.p-practice__card.-min-w-140 {
+  min-width: 140px;
+}
+
+.p-practice__card.is-red {
+  background: #fd13262a;
+}
+
+.p-practice__card.is-blue {
+  background: #134afd28;
+}
+
+.p-practice__card.is-green {
+  background: #08c56721;
+}
+
 .p-practice__display {
   font-size: var(--size-xs);
   background: var(--color-gray-18);
@@ -762,6 +785,10 @@ JavaScript Curriculum Common StyleCSS
 
 .p-practice__item.-nowrap {
   flex-wrap: nowrap;
+}
+
+.p-practice__item.-column {
+  flex-direction: column;
 }
 
 .p-practice__item.-gap-16 {
@@ -863,11 +890,15 @@ JavaScript Curriculum Common StyleCSS
   margin-top: 4px;
 }
 
+.u-ml-4 {
+  margin-left: 4px;
+}
+
 .u-ml-8 {
   margin-left: 8px;
 }
 
-.u-ml-8 {
+.u-ml-16 {
   margin-left: 16px;
 }
 
